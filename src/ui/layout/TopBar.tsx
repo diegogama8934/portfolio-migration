@@ -9,7 +9,7 @@ export function TopBar() {
 
 
   return (
-    <nav className="w-full lg:flex lg:justify-center sticky top-0 bg-white border-b border-gray-200">
+    <nav className="w-full lg:flex lg:justify-center sticky top-0 bg-white border-b border-gray-100 z-50">
 
       {porfolioSections.map((section, index) => (
         <ActiveLink
@@ -21,11 +21,9 @@ export function TopBar() {
 
       <div className="w-full lg:hidden flex justify-between items-center px-4 bg-white shadow py-2">
         <img
-          src="/yo.png"
+          src="/yo.jpeg"
           alt="Mi fotografía"
-          width={700}
-          height={800}
-          className="w-10 h-10 lg:mt-0"
+          className="w-10 h-10 lg:mt-0 rounded-full object-cover"
         />
 
         <BurgerMenu />
