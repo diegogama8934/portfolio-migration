@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.section-title {
+  @apply lg:text-5xl text-3xl font-bold gradient-text;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-600 bg-clip-text text-transparent;
+}
