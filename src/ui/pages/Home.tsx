@@ -1,7 +1,7 @@
-import { SectionContact } from "../components/molecules/SectionContact";
-import { SectionHero } from "../components/molecules/SectionHero";
-import { SectionProjects } from "../components/molecules/SectionProjects";
-import { SectionTechnologies } from "../components/molecules/SectionTechnologies";
+import { SectionContact } from "../components/sections/SectionContact";
+import { SectionHero } from "../components/sections/SectionHero";
+import { SectionProjects } from "../components/sections/SectionProjects";
+import { SectionTechnologies } from "../components/sections/SectionTechnologies";
 
 export function Home() {
   return (
