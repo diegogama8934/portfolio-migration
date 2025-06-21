@@ -24,3 +24,12 @@ export interface ProjectLink {
   icon: React.ReactNode;
   tooltip: string;
 }
+
+export interface OpinionCardProps {
+  id?: string
+  name: string
+  image: string
+  email: string
+  description: string
+  place: string
+}

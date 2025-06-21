@@ -1,4 +1,5 @@
 import { SectionAboutMe } from "../components/sections/SectionAboutMe";
+import { SectionOpinions } from "../components/sections/SectionOpinions";
 
 export function AboutMe() {
   return (
@@ -12,6 +13,8 @@ export function AboutMe() {
       
       {/* Main content */}
       <SectionAboutMe />
+
+      <SectionOpinions />
       
       {/* Bottom decorative gradient */}
       <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>

@@ -1,4 +1,4 @@
-import type { ActiveLink, ProjectResume, TechnologyItem } from "../interfaces";
+import type { ActiveLink, OpinionCardProps, ProjectResume, TechnologyItem } from "../interfaces";
 
 export const porfolioSections: ActiveLink[] = [
   {
@@ -75,4 +75,32 @@ export const technologiesPool: TechnologyItem[] = [
       "API Routes"
     ]
   },
-]
+];
+
+export const opinions: OpinionCardProps[] = [
+  {
+    id: "opinion-1",
+    name: "María González",
+    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    email: "maria.gonzalez@company.com",
+    description: "Diego demostró ser un desarrollador muy profesional y dedicado. Su atención al detalle y capacidad para resolver problemas complejos fueron fundamentales para el éxito de nuestros proyectos.",
+    place: "TechCorp Solutions"
+  },
+  {
+    id: "opinion-2", 
+    name: "Carlos Rodríguez",
+    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", 
+    email: "carlos.rodriguez@startup.com",
+    description: "Trabajar con Diego fue una experiencia excelente. Su conocimiento técnico y habilidad para comunicarse efectivamente hicieron que la colaboración fuera muy productiva.",
+    place: "StartupX"
+  },
+  
+  {
+    id: "opinion-3",
+    name: "Ana Martínez",
+    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    email: "ana.martinez@tech.edu",
+    description: "Diego tiene una capacidad extraordinaria para transmitir conocimientos técnicos complejos de manera clara y concisa. Su pasión por la enseñanza y el desarrollo web es inspiradora.",
+    place: "Tech Academy"
+  }
+];
