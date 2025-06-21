@@ -1,5 +1,6 @@
 import { SectionHero } from "../components/molecules/SectionHero";
 import { SectionProjects } from "../components/molecules/SectionProjects";
+import { SectionTechnologies } from "../components/molecules/SectionTechnologies";
 
 export function Home() {
   return (
@@ -15,6 +16,7 @@ export function Home() {
       <div className="relative z-10 flex flex-col gap-20 px-4 lg:px-40 py-8">
         <SectionHero />
         <SectionProjects />
+        <SectionTechnologies />
       </div>
       
       {/* Bottom decorative gradient */}

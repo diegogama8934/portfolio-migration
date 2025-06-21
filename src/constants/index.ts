@@ -1,7 +1,4 @@
-import type { ActiveLink, ProjectResume, TechnologyItem, ProjectLink } from "../interfaces";
-import { FigmaIcon } from "../ui/Icons/FigmaIcon";
-import { GithubIcon } from "../ui/Icons/GithubIcon";
-import { WebIcon } from "../ui/Icons/WebIcon";
+import type { ActiveLink, ProjectResume, TechnologyItem } from "../interfaces";
 
 export const porfolioSections: ActiveLink[] = [
   {
@@ -48,13 +45,24 @@ export const projectsResume: ProjectResume[] = [
 
 export const technologiesPool: TechnologyItem[] = [
   {
+    name: "Figma",
+    image: "https://forosdeia.com/directorio-ia/figma.843/cover-image",
+    level: 9,
+    knowledge: [
+      "Buenas prácticas",
+      "Variantes",
+      "Componentes",
+      "Prototipos"
+    ]
+  },
+  {
     name: "React",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-    level: 4,
+    level: 8,
     knowledge: [
       "React router",
-      "Redux",
-      "Zustand"
+      "Microfrontends",
+      "Tailwind"
     ]
   },
   {
@@ -62,19 +70,9 @@ export const technologiesPool: TechnologyItem[] = [
     image: "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png",
     level: 4,
     knowledge: [
-      "Next UI",
-      "Server actions",
-      "Manejar caché"
+      "SSR",
+      "SSG",
+      "API Routes"
     ]
   },
-  {
-    name: "Figma",
-    image: "https://forosdeia.com/directorio-ia/figma.843/cover-image",
-    level: 9,
-    knowledge: [
-      "Buenas prácticas para el desarrollo",
-      "Variantes",
-      "Componentes"
-    ]
-  }
 ]

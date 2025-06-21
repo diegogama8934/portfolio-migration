@@ -1,7 +1,16 @@
 @import "tailwindcss";
 
+
 .section-title {
-  @apply lg:text-5xl text-3xl font-bold gradient-text;
+  @apply lg:text-5xl text-3xl font-bold bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-600 bg-clip-text text-transparent lg:leading-normal leading-tight
+}
+
+.section-btn-link {
+  @apply relative inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-white/80 to-white/60 hover:from-blue-50/90 hover:to-purple-50/90 border border-white/40 hover:border-blue-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 backdrop-blur-sm;
+}
+
+.section-btn-link-icon {
+  @apply w-8 h-8 rounded-full text-white flex items-center justify-center bg-gradient-to-r from-blue-400 to-purple-400 transition-transform duration-300;
 }
 
 .gradient-text {
