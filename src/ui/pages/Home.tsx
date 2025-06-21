@@ -1,3 +1,4 @@
+import { SectionContact } from "../components/molecules/SectionContact";
 import { SectionHero } from "../components/molecules/SectionHero";
 import { SectionProjects } from "../components/molecules/SectionProjects";
 import { SectionTechnologies } from "../components/molecules/SectionTechnologies";
@@ -17,6 +18,7 @@ export function Home() {
         <SectionHero />
         <SectionProjects />
         <SectionTechnologies />
+        <SectionContact />
       </div>
       
       {/* Bottom decorative gradient */}
