@@ -20,15 +20,15 @@ export function SectionHero() {
         </div>
 
         <div className="hidden lg:flex flex-col gap-4 w-full max-w-md">
-          <button className="group relative w-full bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-zinc-900/20">
+          <a href="https://github.com/diegogama8934" target="_blank" className="group relative w-full bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-zinc-900/20 text-center">
             <span className="relative z-10">Perfil de Github</span>
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300"></div>
-          </button>
+          </a>
 
-          <button className="group relative w-full bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20">
+          <a href="https://www.linkedin.com/in/diego-martinez-gama-8934/" target="_blank" className="group relative w-full bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-900/20 text-center">
             <span className="relative z-10">Perfil de LinkedIn</span>
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300"></div>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -44,15 +44,15 @@ export function SectionHero() {
       </div>
 
       <div className="relative z-10 flex flex-col gap-4 w-full lg:hidden mt-12">
-        <button className="group relative w-full bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+        <a href="https://github.com/diegogama8934" target="_blank" className="group relative w-full bg-gradient-to-r from-zinc-800 to-zinc-700 hover:from-zinc-700 hover:to-zinc-600 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl text-center">
           <span className="relative z-10">Perfil de Github</span>
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300"></div>
-        </button>
+        </a>
 
-        <button className="group relative w-full bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl">
+        <a href="https://www.linkedin.com/in/diego-martinez-gama-8934/" target="_blank" className="group relative w-full bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white rounded-2xl p-4 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl text-center">
           <span className="relative z-10">LinkedIn</span>
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 transition-all duration-300"></div>
-        </button>
+        </a>
       </div>
     </section>
   );
