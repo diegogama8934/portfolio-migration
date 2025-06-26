@@ -1,4 +1,4 @@
-import type { ActiveLink, OpinionCardProps, ProjectResume, TechnologyItem } from "../interfaces";
+import type { ActiveLink, OpinionCardProps, Project, ProjectResume, TechnologyItem } from "../interfaces";
 
 export const porfolioSections: ActiveLink[] = [
   {
@@ -45,34 +45,195 @@ export const projectsResume: ProjectResume[] = [
 
 export const technologiesPool: TechnologyItem[] = [
   {
-    name: "Figma",
-    image: "https://forosdeia.com/directorio-ia/figma.843/cover-image",
-    level: 9,
-    knowledge: [
-      "Buenas prácticas",
-      "Variantes",
-      "Componentes",
-      "Prototipos"
-    ]
-  },
-  {
     name: "React",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
-    level: 8,
+    image: "https://cdn.iconscout.com/icon/free/png-256/free-react-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945110.png?f=webp&w=256",
+    imgClassName: "scale-90 bg-white p-2 rounded-full",
+    background: "bg-blue-400",
+    level: 90,
     knowledge: [
-      "React router",
-      "Microfrontends",
-      "Tailwind"
+      "Componentes funcionales y de clase",
+      "Hooks personalizados y nativos",
+      "Context API y Redux",
+      "React Router y navegación",
+      "Optimización de rendimiento"
     ]
   },
   {
-    name: "Next",
-    image: "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png",
-    level: 4,
+    name: "TypeScript",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
+    imgClassName: "scale-90 bg-white p-2 rounded-full",
+    background: "bg-blue-600",
+    level: 85,
     knowledge: [
-      "SSR",
-      "SSG",
-      "API Routes"
+      "Tipado estático avanzado",
+      "Interfaces y tipos genéricos",
+      "Decoradores y metadata",
+      "Configuración de proyectos",
+      "Integración con frameworks"
+    ]
+  },
+  {
+    name: "Next.js",
+    image: "https://www.drupal.org/files/project-images/nextjs-icon-dark-background.png",
+    imgClassName: "",
+    background: "bg-gray-500",
+    level: 80,
+    knowledge: [
+      "App Router y Pages Router",
+      "Server Components y Client Components",
+      "API Routes y middleware",
+      "Optimización de imágenes",
+      "Deployment y configuración"
+    ]
+  },
+  {
+    name: "Node.js",
+    image: "https://images.seeklogo.com/logo-png/27/1/node-js-logo-png_seeklogo-273749.png",
+    imgClassName: "scale-90 bg-white p-2 rounded-full",
+    background: "bg-green-600",
+    level: 75,
+    knowledge: [
+      "Express.js y frameworks",
+      "APIs RESTful y GraphQL",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs",
+      "Testing y debugging"
+    ]
+  },
+  {
+    name: "Tailwind CSS",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s",
+    imgClassName: "scale-90 bg-white p-2 rounded-full",
+    background: "bg-cyan-500",
+    level: 90,
+    knowledge: [
+      "Utility-first CSS",
+      "Componentes personalizados",
+      "Responsive design",
+      "Animaciones y transiciones",
+      "Configuración avanzada"
+    ]
+  },
+  {
+    name: "Figma",
+    image: "https://cdn.sanity.io/images/599r6htc/regionalized/5094051dac77593d0f0978bdcbabaf79e5bb855c-1080x1080.png?w=540&h=540&q=75&fit=max&auto=format",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "Diseño de interfaces",
+      "Prototipado interactivo",
+      "Sistemas de diseño",
+      "Colaboración en equipo",
+      "Integración con desarrollo"
+    ]
+  },
+  {
+    name: "Express.js",
+    image: "https://images.seeklogo.com/logo-png/33/1/express-js-logo-png_seeklogo-339850.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "AWS",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2xQcwKitRgXfqdi34DYlocPSEXD2G2zZipg&s",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "GIT",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdd25hyNQOMs4Xx1Cv_A_oaT0zagfSWlXMBA&s",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "Nest",
+    image: "https://upload.wikimedia.org/wikipedia/commons/3/37/NestJS-logo-wordmark.svg",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "Single SPA",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2wv3NcbrGEvDXUGTLi0CCg8rEeB-mVFgNVA&s",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "Jira",
+    image: "https://www.vivantio.com/wp-content/uploads/2024-vivantio-integrations-cover-jira.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "HTML",
+    image: "https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "CSS",
+    image: "https://cdn4.iconfinder.com/data/icons/iconsimple-programming/512/css-512.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "JavaScript",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
     ]
   },
 ];
@@ -87,14 +248,14 @@ export const opinions: OpinionCardProps[] = [
     place: "TechCorp Solutions"
   },
   {
-    id: "opinion-2", 
+    id: "opinion-2",
     name: "Carlos Rodríguez",
-    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png", 
+    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
     email: "carlos.rodriguez@startup.com",
     description: "Trabajar con Diego fue una experiencia excelente. Su conocimiento técnico y habilidad para comunicarse efectivamente hicieron que la colaboración fuera muy productiva.",
     place: "StartupX"
   },
-  
+
   {
     id: "opinion-3",
     name: "Ana Martínez",
@@ -104,3 +265,18 @@ export const opinions: OpinionCardProps[] = [
     place: "Tech Academy"
   }
 ];
+
+export const projects: Project[] = [
+  {
+    id: "project-1",
+    name: "Teach",
+    topic: "Educación en remoto",
+    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
+    technologies: ["React", "Next", "Tailwind"],
+    tags: ["Web", "Mobile", "Desktop"],
+    description: "Educación en remoto",
+    github: "https://github.com/juan-pablo-garcia/teach-opal",
+    page: "https://teach-opal.vercel.app/home/subjects",
+    figma: "https://www.figma.com/design/1234567890/Teach-Opal?node-id=0-1"
+  },
+]

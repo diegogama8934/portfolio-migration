@@ -1,38 +1,36 @@
-import { Link } from "react-router";
 import { technologiesPool } from "../../../constants";
-import { TechnologyItem } from "../atoms/TechnologyItem";
 
 export function SectionTechnologies() {
 
   return (
-    <section className="relative flex flex-col gap-16 py-20">
-      <div className="relative z-10 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <h2 className="section-title">Tecnologías</h2>
-          <span className="text-3xl animate-bounce inline-block">🕹️</span>
+    <div
+      id="technologies"
+      className="relative z-10 flex flex-col gap-20"
+    >
+      <section className="relative flex flex-col gap-16 py-20 items-center">
+
+        <h2 className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20">
+          What powers <span className="gradient-text font-extrabold">my solutions</span>.
+        </h2>
+
+        <span className="material-symbols-outlined !text-[100px] !text-gray-300">construction</span>
+
+        <div className="grid grid-cols-3 gap-4">
+          {technologiesPool.map(({ name, image, level, knowledge }) => (
+            <div key={name} className={`flex w-[320px] h-28 rounded-xl bg-white p-4 border border-gray-200 gap-4`}>
+              <img src={image} alt={name} className={`object-contain aspect-square rounded-md`} />
+              <div className="flex flex-col gap-2">
+                <span className="w-full text-sm font-bold text-gray-500">{name}</span>
+                <p className="flex flex-col gap-2 line-clamp-2">
+                  {knowledge.map((item) => (
+                    <span key={item} className="text-sm text-gray-500">{item}</span>
+                  ))}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-
-        <Link
-          className="group section-btn-link"
-          to="/aboutMe"
-        >
-          <span className="text-blue-700 font-bold lg:text-lg text-base group-hover:text-blue-800 transition-colors">
-            Ver más
-          </span>
-          <div className="section-btn-link-icon group-hover:scale-110">
-            <span className="material-symbols-outlined !text-xl">arrow_outward</span>
-          </div>
-        </Link>
-      </div>
-
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {technologiesPool.map((tech) => (
-          <TechnologyItem
-            key={tech.name}
-            {...tech}
-          />
-        ))}
-      </div>
-    </section>
+      </section >
+    </div >
   );
 }
