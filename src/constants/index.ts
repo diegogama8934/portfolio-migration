@@ -129,6 +129,42 @@ export const technologiesPool: TechnologyItem[] = [
     ]
   },
   {
+    name: "HTML",
+    image: "https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "CSS",
+    image: "https://cdn4.iconfinder.com/data/icons/iconsimple-programming/512/css-512.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
+    name: "JavaScript",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
+    imgClassName: "",
+    background: "bg-purple-600",
+    level: 70,
+    knowledge: [
+      "API RESTful",
+      "Autenticación y autorización",
+      "Bases de datos y ORMs"
+    ]
+  },
+  {
     name: "Express.js",
     image: "https://images.seeklogo.com/logo-png/33/1/express-js-logo-png_seeklogo-339850.png",
     imgClassName: "",
@@ -191,42 +227,6 @@ export const technologiesPool: TechnologyItem[] = [
   {
     name: "Jira",
     image: "https://www.vivantio.com/wp-content/uploads/2024-vivantio-integrations-cover-jira.png",
-    imgClassName: "",
-    background: "bg-purple-600",
-    level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
-  },
-  {
-    name: "HTML",
-    image: "https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png",
-    imgClassName: "",
-    background: "bg-purple-600",
-    level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
-  },
-  {
-    name: "CSS",
-    image: "https://cdn4.iconfinder.com/data/icons/iconsimple-programming/512/css-512.png",
-    imgClassName: "",
-    background: "bg-purple-600",
-    level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
-  },
-  {
-    name: "JavaScript",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/800px-Unofficial_JavaScript_logo_2.svg.png",
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
