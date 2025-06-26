@@ -22,9 +22,10 @@ export function TopBar() {
         transition={{ duration: 0.6, ease: "easeInOut" }}
       >
         <TopBarBtn href="#home">Home</TopBarBtn>
+        <TopBarBtn href="#aboutMe">About Me</TopBarBtn>
         <TopBarBtn href="#projects">Projects</TopBarBtn>
-        <TopBarBtn href="#technologies">Technologies</TopBarBtn>
-        <TopBarBtn href="#contact">Contact</TopBarBtn>
+        <TopBarBtn href="#softSkills">Soft Skills</TopBarBtn>
+        <TopBarBtn href="#recommendations">Recommendations</TopBarBtn>
 
         <Dropdown
           menu={{
