@@ -1,3 +1,4 @@
+import { SectionAboutMe } from "../components/sections/SectionAboutMe";
 import { SectionContact } from "../components/sections/SectionContact";
 import { SectionHero } from "../components/sections/SectionHero";
 import { SectionProjects } from "../components/sections/SectionProjects";
@@ -18,6 +19,7 @@ export function Home() {
       {/* Main content */}
       <div className="relative z-10 flex flex-col gap-20 px-4 lg:px-40 py-8">
         <SectionHero />
+        <SectionAboutMe />
         <SectionProjects />
         <SectionTechnologies />
         <SectionContact />

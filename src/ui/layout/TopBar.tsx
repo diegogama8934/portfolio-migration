@@ -6,7 +6,7 @@ import { Button, Dropdown } from "antd";
 export function TopBar() {
 
   return (
-    <nav className="flex justify-between items-center px-10 py-4 border-b border-gray-200 sticky top-0 left-0 right-0 z-50 bg-white">
+    <nav className="flex justify-between items-center px-10 py-4 border-b border-gray-200 sticky top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/75">
       <motion.img
         src="/DG.svg"
         alt="logo"

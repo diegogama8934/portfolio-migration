@@ -5,7 +5,7 @@ import { HeroBtn } from "../atoms/HeroBtn";
 export function SectionHero() {
   return (
     <div
-      className="flex flex-col items-center justify-center pb-40 pt-10"
+      className="flex flex-col items-center justify-center pb-20 pt-10"
     >
       <motion.h2 className="text-xl md:text-5xl font-semibold text-center mb-6 text-gray-500 leading-relaxed"
         initial={{ opacity: 0, x: 100 }}
@@ -43,10 +43,13 @@ export function SectionHero() {
         </div>
 
         <HeroCta>
-          <a href="#contact" className="flex items-center gap-2">
+          <button
+            onClick={() => { document.getElementById('aboutMe')?.scrollIntoView({ behavior: 'smooth' }); }}
+            className="flex items-center gap-2"
+          >
             <span>Read more</span>
             <span className="material-symbols-outlined !text-lg">arrow_downward</span>
-          </a>
+          </button>
         </HeroCta>
       </motion.div>
     </div>
