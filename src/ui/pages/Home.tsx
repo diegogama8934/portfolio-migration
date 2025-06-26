@@ -3,9 +3,15 @@ import { SectionHero } from "../components/sections/SectionHero";
 import { SectionProjects } from "../components/sections/SectionProjects";
 import { SectionTechnologies } from "../components/sections/SectionTechnologies";
 
+import { motion } from "motion/react"
+
 export function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <motion.div className="relative min-h-screen overflow-hidden"
+      initial={{ opacity: 0, y: 100 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeInOut" }}
+    >
       {/* Background decorative elements */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
@@ -23,6 +29,6 @@ export function Home() {
       
       {/* Bottom decorative gradient */}
       <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
-    </div>
+    </motion.div>
   );
 }
