@@ -1,7 +1,9 @@
-
 import { motion } from "motion/react";
+import { useNavigate } from "react-router";
 
 export function SectionProjects() {
+  const navigate = useNavigate();
+
   return (
     <div
       id="projects"
@@ -23,42 +25,46 @@ export function SectionProjects() {
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-center">
-                <span className="material-symbols-outlined !text-[200px] !text-gray-300">school</span>
+                <img
+                  src="/proj-teach.jpg"
+                  alt="Teach"
+                  className="shadow-lg rounded-md"
+                />
               </div>
               <h3 className="mt-10 text-3xl font-bold gradient-text">TEACH</h3>
               <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 Virtual platform for teachers and students to create and manage their classes.
               </p>
-              <motion.a
-                href="https://teach.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={() => navigate("/project/teach")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 Read project
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.a>
+              </motion.button>
             </div>
           </div>
 
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-center">
-                <span className="material-symbols-outlined !text-[200px] !text-gray-300">wallet</span>
+                <img
+                  src="/proj-we-plan.jpg"
+                  alt="We plan"
+                  className="shadow-lg rounded-md"
+                />
               </div>
               <h3 className="mt-10 text-3xl font-bold gradient-text">We plan</h3>
               <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 Platform for planning and managing personal, couple or family finances.
               </p>
-              <motion.a
-                href="https://weplan.com"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={() => navigate("/project/weplan")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 Read project
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.a>
+              </motion.button>
             </div>
           </div>
 
@@ -66,21 +72,47 @@ export function SectionProjects() {
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-center">
-                <span className="material-symbols-outlined !text-[200px] !text-gray-300">work</span>
+                <img
+                  src="/proj-bolsa-de-trabajo.jpg"
+                  alt="Bolsa de trabajo UAQ"
+                  className="shadow-lg rounded-md"
+                />
               </div>
               <h3 className="mt-10 text-3xl font-bold gradient-text">Bolsa de trabajo UAQ</h3>
               <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 Job board for the Autonomous University of Querétaro.
               </p>
-              <motion.a
-                href="https://bolsa.uaq.mx"
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button
+                onClick={() => navigate("/project/bolsa")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 Read project
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.a>
+              </motion.button>
+            </div>
+          </div>
+          
+          
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-center">
+                <img
+                  src="/proj-random-words.jpg"
+                  alt="Random words"
+                  className="shadow-lg rounded-md"
+                />
+              </div>
+              <h3 className="mt-10 text-3xl font-bold gradient-text">Random words</h3>
+              <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+                Random words generator.
+              </p>
+              <motion.button
+                onClick={() => navigate("/project/random-words")}
+                className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
+              >
+                Read project
+                <span className="material-symbols-outlined !text-base">arrow_outward</span>
+              </motion.button>
             </div>
           </div>
 
