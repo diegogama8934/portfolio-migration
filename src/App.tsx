@@ -1,3 +1,5 @@
+import "./language/config";
+
 import { Routes, Route } from "react-router";
 import { GlobalLayout } from "./ui/layout/GlobalLayout";
 import { Home } from "./ui/pages/Home";
