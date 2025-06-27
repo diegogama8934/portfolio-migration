@@ -34,7 +34,7 @@ export function SectionAboutMe() {
             viewport={{ once: true }}
             src="/yo.jpeg"
             alt="About me"
-            className="w-[150px] h-[150px] object-cover rounded-full shadow-lg"
+            className="sm:w-[150px] sm:h-[150px] w-[100px] h-[100px] object-cover rounded-full shadow-lg"
           />
 
           <motion.img
@@ -44,7 +44,7 @@ export function SectionAboutMe() {
             viewport={{ once: true }}
             src="/yo2.jpeg"
             alt="About me"
-            className="w-[150px] h-[150px] object-cover rounded-full shadow-lg"
+            className="sm:w-[150px] sm:h-[150px] w-[100px] h-[100px] object-cover rounded-full shadow-lg"
           />
 
           <motion.img
@@ -54,7 +54,7 @@ export function SectionAboutMe() {
             viewport={{ once: true }}
             src="/yo3.JPG"
             alt="About me"
-            className="w-[150px] h-[150px] object-cover rounded-full shadow-lg"
+            className="sm:w-[150px] sm:h-[150px] w-[100px] h-[100px] object-cover rounded-full shadow-lg"
           />
         </div>
 

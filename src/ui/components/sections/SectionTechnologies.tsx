@@ -23,7 +23,7 @@ export function SectionTechnologies() {
 
         <span className="material-symbols-outlined !text-[100px] !text-gray-300">construction</span>
 
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 grid-cols-1 gap-4">
           {technologies.map(({ name, image, description, imageClassName }) => (
             <div key={name} className={`flex w-[320px] h-28 rounded-xl bg-white p-4 border border-gray-200 gap-4 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300`}>
               <img src={image} alt={name} className={`object-contain aspect-square rounded-md ${imageClassName}`} />

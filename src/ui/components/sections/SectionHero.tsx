@@ -20,7 +20,7 @@ export function SectionHero() {
       </motion.h2>
 
       <motion.p
-        className="text-2xl text-center mb-8 text-gray-500 leading-relaxed font-light max-w-2xl dark:text-zinc-300"
+        className="text-sm md:mt-0 md:px-0 px-8 mt-4 md:text-xl lg:text-2xl text-center mb-8 text-gray-500 leading-loose md:leading-relaxed font-light max-w-2xl dark:text-zinc-300"
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
@@ -35,7 +35,7 @@ export function SectionHero() {
         className="flex flex-col gap-8 items-center justify-center w-[550px]"
       >
 
-        <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
+        <div className="hidden sm:flex sm:flex-col md:flex-row gap-4 items-center justify-center w-full">
           <HeroBtn className="sm:flex-1">
             <a href={`/CV_${i18n.language === "es" ? "ES" : "EN"}.pdf`} download className="text-gray-500 dark:text-zinc-300">{t("hero.cvAction")}</a>
           </HeroBtn>

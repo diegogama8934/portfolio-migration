@@ -27,9 +27,9 @@ export function SectionSoftSkills() {
           {t("softSkills.description")}
         </motion.p>
 
-        <div className="grid grid-cols-5 gap-x-4 gap-y-12 justify-items-center">
+        <div className="grid md:grid-cols-2 xl:grid-cols-5 grid-cols-1 gap-x-4 xl:gap-y-12 gap-y-4 px-4 xl:px-0 justify-items-center">
 
-          <div className="flex items-center justify-center">
+          <div className="hidden xl:flex items-center justify-center">
             <motion.span
               className="material-symbols-outlined !text-[100px] !text-gray-300 dark:text-zinc-300"
               initial={{ opacity: 0, x: -100 }}
@@ -41,7 +41,7 @@ export function SectionSoftSkills() {
             </motion.span>
           </div>
 
-          <motion.div className="flex flex-col gap-2 bg-gray-100 p-8 rounded-lg col-span-3 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
+          <motion.div className="flex flex-col w-full gap-2 bg-gray-100 p-8 rounded-lg col-span-2 md:col-span-3 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -56,7 +56,7 @@ export function SectionSoftSkills() {
             </p>
           </motion.div>
 
-          <div className="flex items-center justify-center">
+          <div className="hidden xl:flex items-center justify-center">
             <motion.span
               className="material-symbols-outlined !text-[100px] !text-gray-300 dark:text-zinc-300"
               initial={{ opacity: 0, x: 100 }}
@@ -68,7 +68,7 @@ export function SectionSoftSkills() {
             </motion.span>
           </div>
 
-          <motion.div className="flex flex-col gap-2 bg-gray-100 p-8 rounded-lg col-span-2 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
+          <motion.div className="flex flex-col w-full gap-2 bg-gray-100 p-8 rounded-lg col-span-2 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -83,7 +83,7 @@ export function SectionSoftSkills() {
             </p>
           </motion.div>
 
-          <div className="flex items-center justify-center">
+          <div className="hidden xl:flex items-center justify-center">
             <motion.span
               className="material-symbols-outlined !text-[100px] !text-gray-300 dark:text-zinc-300"
               initial={{ opacity: 0, x: 100 }}
@@ -95,7 +95,7 @@ export function SectionSoftSkills() {
             </motion.span>
           </div>
 
-          <motion.div className="flex flex-col gap-2 bg-gray-100 p-8 rounded-lg col-span-2 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
+          <motion.div className="flex flex-col w-full gap-2 bg-gray-100 p-8 rounded-lg col-span-2 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -110,7 +110,7 @@ export function SectionSoftSkills() {
             </p>
           </motion.div>
 
-          <div className="flex items-center justify-center">
+          <div className="hidden xl:flex items-center justify-center">
             <motion.span
               className="material-symbols-outlined !text-[100px] !text-gray-300 dark:text-zinc-300"
               initial={{ opacity: 0, x: 100 }}
@@ -122,7 +122,7 @@ export function SectionSoftSkills() {
             </motion.span>
           </div>
 
-          <motion.div className="flex flex-col gap-2 bg-gray-100 p-8 rounded-lg col-span-3 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
+          <motion.div className="flex flex-col w-full gap-2 bg-gray-100 p-8 rounded-lg col-span-3 dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -136,8 +136,8 @@ export function SectionSoftSkills() {
               {t("softSkills.s4Description")}
             </p>
           </motion.div>
-          
-          <div className="flex items-center justify-center">
+
+          <div className="hidden xl:flex items-center justify-center">
             <motion.span
               className="material-symbols-outlined !text-[100px] !text-gray-300 dark:text-zinc-300"
               initial={{ opacity: 0, x: 100 }}

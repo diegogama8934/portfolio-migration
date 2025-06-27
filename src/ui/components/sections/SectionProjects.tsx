@@ -34,17 +34,20 @@ export function SectionProjects() {
                   className="shadow-lg rounded-md"
                 />
               </div>
-              <h3 className="mt-10 text-3xl font-bold gradient-text">TEACH</h3>
-              <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+              <h3 className="mt-10 text-xl sm:text-3xl font-bold gradient-text">TEACH</h3>
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 {t("projects.teachDescription")}
               </p>
-              <motion.button
+              <p className="text-base sm:text-lg mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+                {t("projects.descriptionInDev")}
+              </p>
+              {/*<motion.button
                 onClick={() => navigate("/project/teach")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 {t("projects.readProject")}
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.button>
+              </motion.button>*/}
             </div>
           </div>
 
@@ -57,17 +60,20 @@ export function SectionProjects() {
                   className="shadow-lg rounded-md"
                 />
               </div>
-              <h3 className="mt-10 text-3xl font-bold gradient-text">We plan</h3>
-              <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+              <h3 className="mt-10 text-xl sm:text-3xl font-bold gradient-text">We plan</h3>
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 {t("projects.wePlanDescription")}
               </p>
-              <motion.button
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+                {t("projects.descriptionInDev")}
+              </p>
+              {/*<motion.button
                 onClick={() => navigate("/project/weplan")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 {t("projects.readProject")}
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.button>
+              </motion.button>*/}
             </div>
           </div>
 
@@ -81,17 +87,20 @@ export function SectionProjects() {
                   className="shadow-lg rounded-md"
                 />
               </div>
-              <h3 className="mt-10 text-3xl font-bold gradient-text">Bolsa de trabajo UAQ</h3>
-              <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+              <h3 className="mt-10 text-xl sm:text-3xl font-bold gradient-text">Bolsa de trabajo UAQ</h3>
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 {t("projects.bolsaDescription")}
               </p>
-              <motion.button
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+                {t("projects.descriptionInDev")}
+              </p>
+              {/*<motion.button
                 onClick={() => navigate("/project/bolsa")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 {t("projects.readProject")}
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.button>
+              </motion.button>*/}
             </div>
           </div>
           
@@ -105,17 +114,20 @@ export function SectionProjects() {
                   className="shadow-lg rounded-md"
                 />
               </div>
-              <h3 className="mt-10 text-3xl font-bold gradient-text">Random words</h3>
-              <p className="text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+              <h3 className="mt-10 text-xl sm:text-3xl font-bold gradient-text">Random words</h3>
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
                 {t("projects.randomWordsDescription")}
               </p>
-              <motion.button
+              <p className="text-lg sm:text-2xl mb-8 text-gray-500 leading-relaxed font-light max-w-2xl">
+                {t("projects.descriptionInDev")}
+              </p>
+              {/*<motion.button
                 onClick={() => navigate("/project/random-words")}
                 className="text-gray-500 flex items-center gap-2 w-fit border border-gray-200 rounded-md px-4 py-2"
               >
                 {t("projects.readProject")}
                 <span className="material-symbols-outlined !text-base">arrow_outward</span>
-              </motion.button>
+              </motion.button>*/}
             </div>
           </div>
 

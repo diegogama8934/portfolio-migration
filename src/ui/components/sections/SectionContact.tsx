@@ -21,13 +21,13 @@ export function SectionContact() {
         </motion.h2>
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
-          <HeroBtn className="sm:flex-1">
+          <HeroBtn className="sm:flex-1 w-full">
             <a href={`/CV_${i18n.language === "es" ? "ES" : "EN"}.pdf`} download className="text-gray-500 dark:text-zinc-300">{t("hero.cvAction")}</a>
           </HeroBtn>
-          <HeroBtn className="sm:flex-1">
+          <HeroBtn className="sm:flex-1 w-full">
             <a target="_blank" href="https://www.linkedin.com/in/diego-martínez-garcía-3301902a8" className="text-gray-500 dark:text-zinc-300">LinkedIn</a>
           </HeroBtn>
-          <HeroBtn className="sm:flex-1">
+          <HeroBtn className="sm:flex-1 w-full">
             <a target="_blank" href="https://github.com/diegogama8934" className="text-gray-500 dark:text-zinc-300">Github</a>
           </HeroBtn>
         </div>
@@ -40,30 +40,34 @@ export function SectionContact() {
           {t("contact.description")}
         </motion.p>
 
-        <form className="grid grid-cols-3 gap-4 border border-gray-200 rounded-md w-full p-8 bg-white dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300">
+        <form className="grid xl:grid-cols-3 grid-cols-1 gap-4 border border-gray-200 rounded-md w-full p-8 bg-white dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300">
           <span className="text-gray-500 font-bold dark:text-zinc-300">{t("contact.references")}</span>
           <p className="col-span-3 text-gray-500 text-sm dark:text-zinc-300">{t("contact.referencesDescription")}</p>
-          <div className="flex flex-col gap-2">
+          
+          <div className="flex flex-col gap-2 xl:col-span-1 col-span-3">
             <label htmlFor="name" className="text-gray-500 text-sm dark:text-zinc-300">
               <span className="text-red-500">* </span>
               {t("contact.name")}
             </label>
             <Input id="name" placeholder={t("contact.name")} />
           </div>
-          <div className="flex flex-col gap-2">
+          
+          <div className="flex flex-col gap-2 xl:col-span-1 col-span-3">
             <label htmlFor="role" className="text-gray-500 text-sm dark:text-zinc-300">
               <span className="text-red-500">* </span>
               {t("contact.role")}
             </label>
             <Input id="role" placeholder={t("contact.role")} />
           </div>
-          <div className="flex flex-col gap-2">
+
+          <div className="flex flex-col gap-2 xl:col-span-1 col-span-3">
             <label htmlFor="place" className="text-gray-500 text-sm dark:text-zinc-300">
               <span className="text-red-500">* </span>
               {t("contact.place")}
             </label>
             <Input id="place" placeholder={t("contact.placePlaceholder")} />
           </div>
+
           <div className="flex flex-col gap-2 col-span-3">
             <label htmlFor="message" className="text-gray-500 text-sm dark:text-zinc-300">
               <span className="text-red-500">* </span>
@@ -71,12 +75,12 @@ export function SectionContact() {
             </label>
             <Input.TextArea id="message" placeholder={t("contact.message")} autoSize={{ minRows: 4, maxRows: 6 }} />
           </div>
-          <div className="col-span-3 flex justify-end">
+          <div className="xl:col-span-3 col-span-1 flex justify-end">
             <Button type="primary" htmlType="submit" className="w-fit">{t("contact.send")}</Button>
           </div>
         </form>
 
-        <div className="grid grid-cols-2 gap-8 w-full">
+        <div className="grid xl:grid-cols-2 grid-cols-1 gap-8 w-full">
           <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-md dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300">
             <div className="flex items-center gap-4">
               <img
@@ -111,7 +115,7 @@ export function SectionContact() {
             </p>
           </div>
 
-          <div className="col-span-2 w-full flex justify-center">
+          <div className="xl:col-span-2 col-span-1 w-full flex justify-center">
             <Pagination
               simple
               defaultCurrent={1}

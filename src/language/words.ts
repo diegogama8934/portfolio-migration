@@ -27,7 +27,8 @@ export const languageConfig = {
       teachDescription: "Plataforma virtual para profesores y estudiantes para crear y gestionar sus clases.",
       wePlanDescription: "Plataforma para planificar y gestionar finanzas personales, parejas o familiares.",
       bolsaDescription: "Tablón de empleo para la Universidad Autónoma de Querétaro.",
-      randomWordsDescription: "Generador de palabras aleatorias."
+      randomWordsDescription: "Generador de palabras aleatorias.",
+      descriptionInDev: "Descripción en desarrollo"
     },
     technologies: {
       title1: "Bases",
@@ -138,7 +139,8 @@ export const languageConfig = {
       teachDescription: "Virtual platform for teachers and students to create and manage their classes.",
       wePlanDescription: "Platform for planning and managing personal, couple or family finances.",
       bolsaDescription: "Job board for the Autonomous University of Querétaro.",
-      randomWordsDescription: "Random words generator."
+      randomWordsDescription: "Random words generator.",
+      descriptionInDev: "Description in progress"
     },
     technologies: {
       title1: "What powers",
