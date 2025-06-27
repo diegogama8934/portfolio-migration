@@ -67,7 +67,7 @@ export const technologiesPool: TechnologyItem[] = [
   },
   {
     name: "HTML",
-    image: "https://w7.pngwing.com/pngs/410/100/png-transparent-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design-text-thumbnail.png",
+    image: "https://cdn-icons-png.flaticon.com/512/174/174854.png",
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
@@ -100,7 +100,7 @@ export const technologiesPool: TechnologyItem[] = [
   {
     name: "AWS",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2xQcwKitRgXfqdi34DYlocPSEXD2G2zZipg&s",
-    imgClassName: "",
+    imgClassName: "dark:bg-white",
     background: "bg-purple-600",
     level: 70,
     description: "Cloud platform for building scalable applications."
@@ -108,7 +108,7 @@ export const technologiesPool: TechnologyItem[] = [
   {
     name: "GIT",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdd25hyNQOMs4Xx1Cv_A_oaT0zagfSWlXMBA&s",
-    imgClassName: "",
+    imgClassName: "dark:bg-white",
     background: "bg-purple-600",
     level: 70,
     description: "Version control system for tracking changes in code."
@@ -116,15 +116,15 @@ export const technologiesPool: TechnologyItem[] = [
   {
     name: "Nest",
     image: "https://upload.wikimedia.org/wikipedia/commons/3/37/NestJS-logo-wordmark.svg",
-    imgClassName: "",
+    imgClassName: "dark:bg-white",
     background: "bg-purple-600",
     level: 70,
     description: "Node.js framework for building server-side applications."
   },
   {
     name: "Single SPA",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2wv3NcbrGEvDXUGTLi0CCg8rEeB-mVFgNVA&s",
-    imgClassName: "",
+    image: "https://single-spa-workshop.com/static/img/single-spa-logo-color.png",
+    imgClassName: "dark:bg-white",
     background: "bg-purple-600",
     level: 70,
     description: "Microfrontend framework for building scalable applications."
@@ -132,7 +132,7 @@ export const technologiesPool: TechnologyItem[] = [
   {
     name: "Jira",
     image: "https://www.vivantio.com/wp-content/uploads/2024-vivantio-integrations-cover-jira.png",
-    imgClassName: "",
+    imgClassName: "dark:bg-white",
     background: "bg-purple-600",
     level: 70,
     description: "Project management tool for tracking changes in code."

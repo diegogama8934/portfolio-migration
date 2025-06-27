@@ -14,13 +14,13 @@ export function SectionProjects() {
       <section className="relative flex flex-col gap-16">
 
         <motion.h2
-          className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20"
+          className="section-title mt-20"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          {t("projects.title1")} <span className="gradient-text font-extrabold">{t("projects.title2")}</span>.
+          {t("projects.title1")} <span className="gradient-text font-extrabold">{t("projects.title2")}</span>
         </motion.h2>
 
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8">

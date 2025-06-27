@@ -22,7 +22,7 @@ export const languageConfig = {
     },
     projects: {
       title1: "De la idea",
-      title2: "al producto.",
+      title2: "al producto",
       readProject: "Explorar proyecto",
       teachDescription: "Plataforma virtual para profesores y estudiantes para crear y gestionar sus clases.",
       wePlanDescription: "Plataforma para planificar y gestionar finanzas personales, parejas o familiares.",
@@ -132,7 +132,7 @@ export const languageConfig = {
     },
     projects: {
       title1: "Work that",
-      title2: "speaks for itself.",
+      title2: "speaks for itself",
       readProject: "Read project",
       teachDescription: "Virtual platform for teachers and students to create and manage their classes.",
       wePlanDescription: "Platform for planning and managing personal, couple or family finances.",

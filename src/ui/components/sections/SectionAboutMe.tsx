@@ -9,7 +9,7 @@ export function SectionAboutMe() {
       className="relative z-10 flex flex-col gap-20"
     >
       <section className="relative flex flex-col items-center gap-10">
-        <motion.h2 className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20"
+        <motion.h2 className="section-title mt-20"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -18,7 +18,7 @@ export function SectionAboutMe() {
           {t("aboutMe.title1")} <span className="gradient-text font-extrabold">{t("aboutMe.title2")}</span> {t("aboutMe.title3")}
         </motion.h2>
 
-        <motion.p className="text-2xl text-center text-gray-500 leading-relaxed font-light max-w-2xl"
+        <motion.p className="section-description"
           initial={{ opacity: 0, x: -100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
@@ -60,7 +60,7 @@ export function SectionAboutMe() {
 
         <div className="prose prose-lg text-zinc-600 flex-1 pt-10 px-16">
           <motion.p
-            className="mb-4 leading-loose"
+            className="mb-4 leading-loose dark:text-zinc-400"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
@@ -70,7 +70,7 @@ export function SectionAboutMe() {
           </motion.p>
 
           <motion.p
-            className="mb-4 leading-loose"
+            className="mb-4 leading-loose dark:text-zinc-400"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
@@ -80,7 +80,7 @@ export function SectionAboutMe() {
           </motion.p>
 
           <motion.p
-            className="mb-4 leading-loose"
+            className="mb-4 leading-loose dark:text-zinc-400"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
@@ -90,7 +90,7 @@ export function SectionAboutMe() {
           </motion.p>
 
           <motion.p
-            className="mb-4 leading-loose"
+            className="mb-4 leading-loose dark:text-zinc-400"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
@@ -100,7 +100,7 @@ export function SectionAboutMe() {
           </motion.p>
 
           <motion.p
-            className="mb-4 leading-loose"
+            className="mb-4 leading-loose dark:text-zinc-400"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
