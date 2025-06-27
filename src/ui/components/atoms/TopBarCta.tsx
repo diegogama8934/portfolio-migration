@@ -6,7 +6,7 @@ interface TopBarCtaProps {
 
 export function TopBarCta({ children }: TopBarCtaProps) {
   return (
-    <motion.button className="px-4 py-[10px] rounded-md text-sm bg-gradient-to-r from-neutral-950 to-neutral-900 text-white"
+    <motion.div className="px-4 py-[10px] rounded-md text-sm bg-gradient-to-r dark:from-white dark:to-neutral-100 from-neutral-950 to-neutral-900 text-white"
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}
@@ -14,6 +14,6 @@ export function TopBarCta({ children }: TopBarCtaProps) {
       whileTap={{ scale: 0.90, transition: { duration: 0.2 } }}
     >
       {children}
-    </motion.button>
+    </motion.div>
   )
 }

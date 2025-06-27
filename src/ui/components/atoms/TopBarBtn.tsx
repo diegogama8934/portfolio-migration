@@ -8,7 +8,7 @@ interface TopBarBtnProps {
 export function TopBarBtn({ children, href }: TopBarBtnProps) {
   return (
     <motion.a
-      className="px-4 py-[10px] rounded-md text-sm"
+      className="px-4 py-[10px] rounded-md text-sm dark:text-white text-black"
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, ease: "easeInOut" }}

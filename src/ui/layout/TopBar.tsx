@@ -3,14 +3,16 @@ import { TopBarBtn } from "../components/atoms/TopBarBtn";
 import { TopBarCta } from "../components/atoms/TopBarCta";
 import { Button, Dropdown } from "antd";
 import { useTranslation } from "react-i18next";
+import { useContext } from "react";
+import { themeContext } from "../providers/ThemeProvider";
 
 export function TopBar() {
   const { t, i18n } = useTranslation();
-
+  const { toggleTheme } = useContext(themeContext);
   return (
-    <nav className="flex justify-between items-center px-10 py-4 border-b border-gray-200 sticky top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/75">
+    <nav className="flex justify-between items-center px-10 py-4 border-b border-gray-200 dark:border-neutral-800 dark:bg-neutral-800/20 sticky top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/75">
       <motion.img
-        src="/DG.svg"
+        src="/icon.svg"
         alt="logo"
         className="w-8 h-8"
         initial={{ opacity: 0, y: -100 }}
@@ -33,20 +35,39 @@ export function TopBar() {
           menu={{
             items: [
               {
-                key: "1", label: t("topBar.light"), icon: <span className="material-symbols-outlined !text-base">light_mode</span>
+                key: "1",
+                label: t("topBar.light"),
+                icon: <span className="material-symbols-outlined !text-base">light_mode</span>,
+                onClick: () => {
+                  toggleTheme("light");
+                }
               },
               {
-                key: "2", label: t("topBar.dark"), icon: <span className="material-symbols-outlined !text-base">dark_mode</span>
+                key: "2",
+                label: t("topBar.dark"),
+                icon: <span className="material-symbols-outlined !text-base">dark_mode</span>,
+                onClick: () => {
+                  toggleTheme("dark");
+                }
               },
               {
-                key: "3", label: t("topBar.system"), icon: <span className="material-symbols-outlined !text-base">auto_mode</span>
+                key: "3",
+                label: t("topBar.system"),
+                icon: <span className="material-symbols-outlined !text-base">auto_mode</span>,
+                onClick: () => {
+                  toggleTheme("system");
+                }
               },
             ]
           }}
           trigger={["click"]}
         >
-          <Button className="flex items-center gap-2" type="text" icon={<span className="material-symbols-outlined !text-base">contrast</span>}>
-            <span>{t("topBar.system")}</span>
+          <Button
+            className="flex items-center gap-2"
+            type="text"
+            icon={<span className="material-symbols-outlined !text-base dark:!text-white ">contrast</span>}
+          >
+            <span className="dark:text-white">{t("topBar.system")}</span>
           </Button>
         </Dropdown>
 
@@ -73,13 +94,23 @@ export function TopBar() {
           }}
           trigger={["click"]}
         >
-          <Button className="flex items-center gap-2" type="text" icon={<span className="material-symbols-outlined !text-base">language</span>}>
-            <span>{i18n.language === "es" ? t("topBar.spanish") : t("topBar.english")}</span>
+          <Button
+            className="flex items-center gap-2"
+            type="text"
+            icon={
+              <span
+                className={`material-symbols-outlined !text-base ${i18n.language === "es" ? "dark:!text-white" : "dark:!text-black"}`}
+              >
+                language
+              </span>
+            }
+          >
+            <span className="dark:text-white">{i18n.language === "es" ? t("topBar.spanish") : t("topBar.english")}</span>
           </Button>
         </Dropdown>
 
         <TopBarCta>
-          <a href="/CV_EN.pdf" download>{t("topBar.downloadCV")}</a>
+          <a href="/CV_EN.pdf" className="dark:text-black text-white" download>{t("topBar.downloadCV")}</a>
         </TopBarCta>
       </motion.div>
     </nav >

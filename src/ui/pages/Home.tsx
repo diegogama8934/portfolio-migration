@@ -9,8 +9,7 @@ import { Footer } from "../components/sections/Footer";
 
 export function Home() {
   return (
-    <div className="relative min-h-screen overflow-hidden"
-    >
+    <div className="relative min-h-screen overflow-hidden">
       {/* Background decorative elements */}
       <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-br from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
@@ -30,7 +29,7 @@ export function Home() {
       </div>
 
       {/* Bottom decorative gradient */}
-      <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/20 to-transparent pointer-events-none"></div>
+      <div className="fixed bottom-0 left-0 w-full h-32 bg-gradient-to-t dark:from-neutral-900/20 dark:to-transparent from-white/20 to-transparent pointer-events-none"></div>
     </div>
   );
 }
