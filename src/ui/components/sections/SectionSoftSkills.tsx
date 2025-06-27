@@ -1,6 +1,9 @@
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export function SectionSoftSkills() {
+  const { t } = useTranslation();
+
   return (
     <div
       id="softSkills"
@@ -13,7 +16,7 @@ export function SectionSoftSkills() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          The way I <span className="gradient-text font-extrabold">work</span>.
+          {t("softSkills.title1")} <span className="gradient-text font-extrabold">{t("softSkills.title2")}</span>.
         </motion.h2>
 
         <motion.p className="text-2xl text-center text-gray-500 leading-relaxed font-light max-w-2xl"
@@ -21,7 +24,7 @@ export function SectionSoftSkills() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
         >
-          Skills You Can’t Compile, but Matter
+          {t("softSkills.description")}
         </motion.p>
 
         <div className="grid grid-cols-5 gap-x-4 gap-y-12 justify-items-center">
@@ -45,11 +48,11 @@ export function SectionSoftSkills() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-bold text-gray-500">
-              Communication
+              {t("softSkills.s1")}
             </h3>
 
             <p className="text-gray-500 leading-relaxed">
-              I communicate clearly, ask the right questions, and keep teams aligned. Always open to feedback and willing to learn.
+              {t("softSkills.s1Description")}
             </p>
           </motion.div>
 
@@ -72,11 +75,11 @@ export function SectionSoftSkills() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-bold text-gray-500">
-              Resilience
+              {t("softSkills.s2")}
             </h3>
 
             <p className="text-gray-500 leading-relaxed">
-              I stay focused and constructive, always finding the way to move forward.
+              {t("softSkills.s2Description")}
             </p>
           </motion.div>
 
@@ -99,11 +102,11 @@ export function SectionSoftSkills() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-bold text-gray-500">
-              Adaptability
+              {t("softSkills.s3")}
             </h3>
 
             <p className="text-gray-500 leading-relaxed">
-              I embrace change and adjust quickly to new tools, contexts, and team dynamics.
+              {t("softSkills.s3Description")}
             </p>
           </motion.div>
 
@@ -126,11 +129,11 @@ export function SectionSoftSkills() {
             viewport={{ once: true }}
           >
             <h3 className="text-lg font-bold text-gray-500">
-              Problem solving and proactivity
+              {t("softSkills.s4")}
             </h3>
 
             <p className="text-gray-500 leading-relaxed">
-              I take initiative, identify opportunities, and act before problems escalate. I am not afraid to ask for help when needed.
+              {t("softSkills.s4Description")}
             </p>
           </motion.div>
           
