@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import type { Theme } from "../../interfaces";
 import { createContext, useEffect, useState } from "react";
 import { applyTheme, getInitialTheme, setStoredTheme, getEffectiveTheme } from "../../utils/theme";
@@ -10,7 +11,7 @@ export interface themeContextInterface {
 
 export const themeContext: React.Context<themeContextInterface> = createContext<themeContextInterface>({
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  toggleTheme: (theme: Theme) => { },
+  toggleTheme: (_theme: Theme) => { },
   theme: "light",
   effectiveTheme: "light"
 });

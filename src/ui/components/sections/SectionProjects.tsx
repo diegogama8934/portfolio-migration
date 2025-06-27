@@ -1,9 +1,9 @@
 import { motion } from "motion/react";
-import { useNavigate } from "react-router";
+//import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
 
 export function SectionProjects() {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const { t } = useTranslation();
 
   return (
@@ -103,8 +103,8 @@ export function SectionProjects() {
               </motion.button>*/}
             </div>
           </div>
-          
-          
+
+
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-center">
