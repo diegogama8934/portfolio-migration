@@ -2,6 +2,7 @@ import { SectionAboutMe } from "../components/sections/SectionAboutMe";
 import { SectionContact } from "../components/sections/SectionContact";
 import { SectionHero } from "../components/sections/SectionHero";
 import { SectionProjects } from "../components/sections/SectionProjects";
+import { SectionSoftSkills } from "../components/sections/SectionSoftSkills";
 import { SectionTechnologies } from "../components/sections/SectionTechnologies";
 
 
@@ -22,6 +23,7 @@ export function Home() {
         <SectionAboutMe />
         <SectionProjects />
         <SectionTechnologies />
+        <SectionSoftSkills />
         <SectionContact />
       </div>
 
