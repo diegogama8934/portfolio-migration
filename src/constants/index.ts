@@ -1,4 +1,4 @@
-import type { ActiveLink, OpinionCardProps, Project, ProjectResume, TechnologyItem } from "../interfaces";
+import type { ActiveLink, OpinionCardProps, Project, TechnologyItem } from "../interfaces";
 
 export const porfolioSections: ActiveLink[] = [
   {
@@ -15,33 +15,6 @@ export const porfolioSections: ActiveLink[] = [
   }
   //TODO: Add contact and testimonials
 ];
-
-export const projectsResume: ProjectResume[] = [
-  {
-    name: "Teach",
-    objective: "Educación en remoto",
-    description: "Imparte, cursa y administra materiales escolares.",
-    github: "https://github.com/juan-pablo-garcia/teach-opal",
-    figma: "https://www.figma.com/design/1234567890/Teach-Opal?node-id=0-1",
-    page: "https://teach-opal.vercel.app/home/subjects"
-  },
-  {
-    name: "Bolsa de trabajo UAQ",
-    objective: "Fuente de trabajo",
-    description: "Un buen lugar para encontrar trabajo o colaboradores.",
-    github: "https://github.com/juan-pablo-garcia/teach-opal",
-    figma: "https://www.figma.com/design/1234567890/Teach-Opal?node-id=0-1",
-    page: "https://teach-opal.vercel.app/home/subjects"
-  },
-  {
-    name: "Tech Nova",
-    objective: "Administración de proyectos",
-    description: "Integrantes, tareas, fechas, problemas... gestiónalo todo.",
-    github: "https://github.com/juan-pablo-garcia/teach-opal",
-    figma: "https://www.figma.com/design/1234567890/Teach-Opal?node-id=0-1",
-    page: "https://teach-opal.vercel.app/home/subjects"
-  }
-]
 
 export const technologiesPool: TechnologyItem[] = [
   {
