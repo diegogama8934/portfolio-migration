@@ -11,7 +11,8 @@ export function SectionProjects() {
     >
       <section className="relative flex flex-col gap-16">
 
-        <motion.h2 className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20"
+        <motion.h2
+          className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
