@@ -1,113 +1,110 @@
+import { motion } from "motion/react";
+import { Button, Input, Pagination } from "antd";
+
 export function SectionContact() {
   return (
-    <section className="relative flex flex-col gap-16 py-20">
-      <div className="relative z-10 flex justify-between items-center">
-        <div className="flex items-center gap-4">
-          <h2 className="section-title">Contacto</h2>
-          <span className="text-3xl animate-bounce inline-block">🕹️</span>
+    <div className="relative z-10 flex flex-col items-center">
+
+      <section className="relative flex flex-col items-center gap-16 py-20 w-full">
+        <motion.h2
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20"
+        >
+          Open to <span className="gradient-text font-extrabold">conversations</span>
+        </motion.h2>
+
+        <motion.p className="text-2xl text-center text-gray-500 leading-relaxed font-light max-w-2xl"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
+        >
+          I'm listening!
+        </motion.p>
+
+        <form className="grid grid-cols-3 gap-4 border border-gray-200 rounded-md w-full p-8 bg-white">
+          <div className="flex flex-col gap-2">
+            <label htmlFor="name" className="text-gray-500 text-sm">
+              <span className="text-red-500">* </span>
+              Name
+            </label>
+            <Input id="name" placeholder="Name" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="role" className="text-gray-500 text-sm">
+              <span className="text-red-500">* </span>
+              Role
+            </label>
+            <Input id="role" placeholder="Role" />
+          </div>
+          <div className="flex flex-col gap-2">
+            <label htmlFor="place" className="text-gray-500 text-sm">
+              <span className="text-red-500">* </span>
+              Where do we meet?
+            </label>
+            <Input id="place" placeholder="Place" />
+          </div>
+          <div className="flex flex-col gap-2 col-span-3">
+            <label htmlFor="message" className="text-gray-500 text-sm">
+              <span className="text-red-500">* </span>
+              Message
+            </label>
+            <Input.TextArea id="message" placeholder="Message" autoSize={{ minRows: 4, maxRows: 6 }} />
+          </div>
+          <div className="col-span-3 flex justify-end">
+            <Button type="primary" htmlType="submit" className="w-fit">Send</Button>
+          </div>
+        </form>
+
+        <div className="grid grid-cols-2 gap-8 w-full">
+          <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-md">
+            <div className="flex items-center gap-4">
+              <img
+                src="https://img.freepik.com/foto-gratis/cintura-arriba-retrato-hombre-guapo-afeitar-serio-mantiene-manos-juntas-vestido-camisa-azul-oscuro-ha-hablado-interlocutor-esta-parado-contra-pared-blanca-freelancer-hombre-seguro-si-mismo_273609-16320.jpg?semt=ais_items_boosted&w=740"
+                alt="profile"
+                className="w-14 h-14 object-cover rounded-full"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-semibold">Juan Pablo Costas Rueda</h3>
+                <p className="text-sm text-gray-500">Software Engineer | <span>Kronox & Kairos</span></p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500">
+              I'm looking for a new challenge. I'm open to new opportunities.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-md">
+            <div className="flex items-center gap-4">
+              <img
+                src="https://secrecyjewels.es/blog/wp-content/uploads/2022/10/esencia-de-una-persona.jpg"
+                alt="profile"
+                className="w-14 h-14 object-cover rounded-full"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-lg font-semibold">Ana María Velázquez Figueroa</h3>
+                <p className="text-sm text-gray-500">Software Engineer | <span>Kronox & Kairos</span></p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500">
+              I'm looking for a new challenge. I'm open to new opportunities.
+            </p>
+          </div>
+
+          <div className="col-span-2 w-full flex justify-center">
+            <Pagination
+              simple
+              defaultCurrent={1}
+              total={0}
+              pageSize={6}
+              disabled
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <a 
-          href="mailto:diegogama8934@gmail.com"
-          className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 border border-white/20 shadow-lg hover:scale-105 transition-transform duration-300"
-        >
-          <div className="text-3xl">📧</div>
-          <div>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Email</h3>
-            <p className="text-zinc-600">your.email@example.com</p>
-          </div>
-        </a>
-
-        <a 
-          href="www.linkedin.com/in/diego-martínez-garcía-3301902a8"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 border border-white/20 shadow-lg hover:scale-105 transition-transform duration-300"
-        >
-          <div className="text-3xl">💼</div>
-          <div>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">LinkedIn</h3>
-            <p className="text-zinc-600">Connect with me</p>
-          </div>
-        </a>
-
-        <a 
-          href="https://github.com/diegogama8934"
-          target="_blank"
-          rel="noopener noreferrer" 
-          className="flex items-center gap-4 p-6 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 border border-white/20 shadow-lg hover:scale-105 transition-transform duration-300"
-        >
-          <div className="text-3xl">👨‍💻</div>
-          <div>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">GitHub</h3>
-            <p className="text-zinc-600">Check my repositories</p>
-          </div>
-        </a>
-      </div>
-
-
-      <form className="max-w-2xl mx-auto w-full">
-        <div className="flex flex-col gap-6 p-8 rounded-2xl bg-gradient-to-br from-white/80 to-white/40 border border-white/20 shadow-lg">
-          <div className="flex items-center gap-3 mb-2">
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Déjame tu opinión</h3>
-            <span className="text-2xl">✍️</span>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label htmlFor="name" className="text-sm font-semibold text-zinc-600">Nombre</label>
-            <input
-              type="text"
-              id="name"
-              className="p-3 rounded-xl bg-white/50 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all duration-300"
-              placeholder="Tu nombre"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label htmlFor="email" className="text-sm font-semibold text-zinc-600">Email</label>
-            <input
-              type="email"
-              id="email"
-              className="p-3 rounded-xl bg-white/50 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all duration-300"
-              placeholder="tu@email.com"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label htmlFor="connection" className="text-sm font-semibold text-zinc-600">¿De dónde nos conocemos?</label>
-            <input
-              type="text"
-              id="connection"
-              className="p-3 rounded-xl bg-white/50 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all duration-300"
-              placeholder="Empresa, proyecto o lugar donde nos conocimos"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label htmlFor="message" className="text-sm font-semibold text-zinc-600">Mensaje</label>
-            <textarea
-              id="message"
-              rows={4}
-              className="p-3 rounded-xl bg-white/50 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400/30 transition-all duration-300 resize-none"
-              placeholder="Escribe tu opinión aquí..."
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:opacity-90 transition-opacity duration-300"
-          >
-            Enviar mensaje
-          </button>
-        </div>
-      </form>
-
-      <div className="text-center text-zinc-500 text-sm">
-        © 2025 Diego Martínez García. All rights reserved.
-      </div>
-
-    </section>
+      </section>
+    </div>
   );
 }

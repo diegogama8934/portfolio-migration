@@ -1,54 +1,113 @@
+import { motion } from "motion/react";
+
 export function SectionAboutMe() {
   return (
-    <div className="relative z-10 flex flex-col gap-20 px-4 lg:px-80 py-8">
-      <section className="relative flex flex-col gap-16 py-20">
-        <div className="relative z-10 flex items-center gap-4">
-          <h2 className="section-title">¿Qué es lo que hago?</h2>
-          <span className="text-3xl animate-bounce inline-block">💼</span>
+    <div
+      id="aboutMe"
+      className="relative z-10 flex flex-col gap-20"
+    >
+      <section className="relative flex flex-col items-center gap-10">
+        <motion.h2 className="text-xl md:text-5xl font-semibold text-center text-gray-500 leading-relaxed mt-20"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Who is <span className="gradient-text font-extrabold">building</span> this?
+        </motion.h2>
+
+        <motion.p className="text-2xl text-center text-gray-500 leading-relaxed font-light max-w-2xl"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut", delay: 0.6 }}
+        >
+          A graduated software engineer.
+        </motion.p>
+
+        <div className="flex gap-4 items-center">
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+            src="/yo.jpeg"
+            alt="About me"
+            className="w-[150px] h-[150px] object-cover rounded-full shadow-lg"
+          />
+
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+            src="/yo2.jpeg"
+            alt="About me"
+            className="w-[150px] h-[150px] object-cover rounded-full shadow-lg"
+          />
+
+          <motion.img
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+            src="/yo3.JPG"
+            alt="About me"
+            className="w-[150px] h-[150px] object-cover rounded-full shadow-lg"
+          />
         </div>
 
-        <div className="relative z-10">
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mb-8"></div>
+        <div className="prose prose-lg text-zinc-600 flex-1 pt-10 px-16">
+          <motion.p
+            className="mb-4 leading-loose"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            I'm Diego Martínez García.
+          </motion.p>
 
-          <div className="prose prose-lg">
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Mi camino profesional comenzó en el mundo del <span className="font-semibold text-zinc-700">diseño de interfaces</span>, enfocado en crear experiencias intuitivas y accesibles para los usuarios. Siempre me ha motivado pensar en cómo los productos digitales pueden ser no solo visualmente atractivos, sino también funcionales y fáciles de usar.
-            </p>
+          <motion.p
+            className="mb-4 leading-loose"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            I started my career in interface design, focused on creating accessible and functional experiences. Over time, I wanted to bring my designs to life through code, and I found in React a key tool to do so. Today, I combine my UI design skills with front-end development, creating prototypes and taking them to production with attention to both aesthetics and clean code.
+          </motion.p>
 
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Con el tiempo, ese interés me llevó a querer implementar mis propios diseños en código, y fue así como descubrí <span className="font-semibold text-zinc-700">React</span>, una herramienta que se convirtió en mi principal aliada para transformar ideas en productos reales.
-            </p>
+          <motion.p
+            className="mb-4 leading-loose"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            Recently, I’ve worked with Microfrontend architectures using Single SPA, developing shared modules to enhance scalability and avoid redundancy. I'm currently preparing for the AWS Developer Associate certification, aiming to strengthen my cloud skills.
+          </motion.p>
 
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Actualmente, combino mis habilidades como diseñador de interfaces con mi rol como <span className="font-semibold text-zinc-700">desarrollador front-end</span>. Tengo experiencia creando prototipos de baja y media-alta fidelidad, para luego implementarlos directamente en React, cuidando tanto la estética como la calidad del código.
-            </p>
+          <motion.p
+            className="mb-4 leading-loose"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            I have three years of experience, which began in a collaborative development center where I volunteered to learn and contribute. There, I developed both technical and soft skills: organization, communication, and teamwork.
+          </motion.p>
 
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Recientemente, he trabajado con <span className="font-semibold text-zinc-700">arquitecturas de Microfrontends</span> utilizando Single SPA, lo que me ha permitido contribuir a la modularización de aplicaciones grandes, facilitando su mantenimiento y escalabilidad. En este contexto, también he desarrollado módulos utilitarios que centralizan dependencias compartidas, optimizando el rendimiento y evitando redundancias entre microfrontends.
-            </p>
-
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Me estoy preparando para obtener la <span className="font-semibold text-zinc-700">certificación AWS Developer Associate</span>, con el objetivo de fortalecer mis conocimientos en la nube y expandir mi perfil como desarrollador.
-            </p>
-
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Tengo aproximadamente <span className="font-semibold text-zinc-700">tres años de experiencia</span>, los cuales inicié en un centro de desarrollo ofreciendo mi trabajo de forma gratuita, con la intención de aprender, mejorar y aportar. Esa etapa me permitió crecer tanto en habilidades técnicas como en competencias blandas, como la colaboración, la organización y la comunicación efectiva.
-            </p>
-
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Me considero una persona <span className="font-semibold text-zinc-700">resiliente y adaptable</span>. Siempre estoy dispuesto a escuchar críticas constructivas, ya sea sobre un diseño o una decisión técnica, porque creo firmemente que de cada conversación se puede aprender algo nuevo.
-            </p>
-
-            <p className="text-zinc-600 leading-relaxed mb-6">
-              Además, me gusta mantenerme activo tanto física como mentalmente: en mis tiempos libres disfruto ir al gimnasio, jugar y ver partidos de basquetbol, jugar videojuegos, y seguir aprendiendo a través de cursos relacionados con mi área.
-            </p>
-
-            <p className="text-zinc-600 leading-relaxed">
-              Mi nivel de inglés es <span className="font-semibold text-zinc-700">B2</span>, y aunque actualmente no lo hablo con la fluidez de antes por falta de práctica frecuente, sé que con tiempo y constancia recuperaré esa soltura. Estoy comprometido a mejorar también en ese aspecto para poder comunicarme sin barreras en entornos internacionales.
-            </p>
-          </div>
+          <motion.p
+            className="mb-4 leading-loose"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            I consider myself adaptable and open to continuous learning. I enjoy working out, playing basketball and video games, and I stay up to date with courses in my field. My English level is B2, and I’m actively working to regain fluency and communicate confidently in international settings.
+          </motion.p>
         </div>
       </section>
     </div>
-  );
+  )
 }

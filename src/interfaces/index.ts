@@ -12,10 +12,25 @@ export interface ProjectResume {
   page?: string
 }
 
+export interface Project {
+  id: string
+  name: string
+  topic: string
+  description: string
+  image: string
+  github?: string
+  page?: string
+  figma?: string
+  technologies: string[]
+  tags: string[]
+}
+
 export interface TechnologyItem {
   name: string
-  level: number
   image: string
+  imgClassName: string
+  background: string
+  level: number
   knowledge: string[]
 }
 

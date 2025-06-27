@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
+.orbiter {
+  position: absolute;
+  animation: move-around-orbit 5s ease-in-out infinite;
+}
+
+@keyframes move-around-orbit {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  10% {
+    transform: translate(-90%, 10%);
+  }
+  20% {
+    transform: translate(-80%, 20%);
+  }
+  30% {
+    transform: translate(-70%, 30%);
+  }
+  40% {
+    transform: translate(-60%, 40%);
+  }
+  50% {
+    transform: translate(-50%, 50%);
+  }
+  60% {
+    transform: translate(-40%, 60%);
+  }
+  70% {
+    transform: translate(-30%, 70%);
+  }
+  80% {
+    transform: translate(-20%, 80%);
+  }
+  90% {
+    transform: translate(-10%, 90%);
+  }
+  100% {
+    transform: translate(0%, 100%);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
 
 .section-title {
   @apply lg:text-5xl text-3xl font-bold bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-600 bg-clip-text text-transparent lg:leading-normal leading-tight
