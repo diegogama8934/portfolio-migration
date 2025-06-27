@@ -4,6 +4,7 @@ import { SectionHero } from "../components/sections/SectionHero";
 import { SectionProjects } from "../components/sections/SectionProjects";
 import { SectionSoftSkills } from "../components/sections/SectionSoftSkills";
 import { SectionTechnologies } from "../components/sections/SectionTechnologies";
+import { Footer } from "../components/sections/Footer";
 
 
 export function Home() {
@@ -25,6 +26,7 @@ export function Home() {
         <SectionTechnologies />
         <SectionSoftSkills />
         <SectionContact />
+        <Footer />
       </div>
 
       {/* Bottom decorative gradient */}

@@ -32,13 +32,13 @@ export function SectionHero() {
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
           <HeroBtn className="sm:flex-1">
-            <a href="#" className="text-gray-500">Download CV</a>
+            <a href="/CV_EN.pdf" download className="text-gray-500">Download CV</a>
           </HeroBtn>
           <HeroBtn className="sm:flex-1">
-            <a href="#" className="text-gray-500">LinkedIn</a>
+            <a target="_blank" href="https://www.linkedin.com/in/diego-martínez-garcía-3301902a8" className="text-gray-500">LinkedIn</a>
           </HeroBtn>
           <HeroBtn className="sm:flex-1">
-            <a href="#" className="text-gray-500">Github</a>
+            <a target="_blank" href="https://github.com/diegogama8934" className="text-gray-500">Github</a>
           </HeroBtn>
         </div>
 

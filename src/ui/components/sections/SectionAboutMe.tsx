@@ -64,6 +64,16 @@ export function SectionAboutMe() {
             transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
             viewport={{ once: true }}
           >
+            I'm Diego Martínez García.
+          </motion.p>
+
+          <motion.p
+            className="mb-4 leading-loose"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut", delay: 0.3 }}
+            viewport={{ once: true }}
+          >
             I started my career in interface design, focused on creating accessible and functional experiences. Over time, I wanted to bring my designs to life through code, and I found in React a key tool to do so. Today, I combine my UI design skills with front-end development, creating prototypes and taking them to production with attention to both aesthetics and clean code.
           </motion.p>
 

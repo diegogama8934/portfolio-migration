@@ -104,10 +104,6 @@ export function SectionContact() {
           </div>
         </div>
 
-        <div className="text-center text-zinc-500 text-sm">
-          © 2025 Diego Martínez García. All rights reserved.
-        </div>
-
       </section>
     </div>
   );

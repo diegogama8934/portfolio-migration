@@ -67,7 +67,7 @@ export function TopBar() {
         </Dropdown>
 
         <TopBarCta>
-          <a href="/CV.pdf" download>Download CV</a>
+          <a href="/CV_EN.pdf" download>Download CV</a>
         </TopBarCta>
       </motion.div>
     </nav >
