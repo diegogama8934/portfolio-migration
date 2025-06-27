@@ -8,7 +8,7 @@ import { themeContext } from "../providers/ThemeProvider";
 
 export function TopBar() {
   const { t, i18n } = useTranslation();
-  const { toggleTheme } = useContext(themeContext);
+  const { toggleTheme, theme: themeState } = useContext(themeContext);
   return (
     <nav
       className="flex justify-between items-center px-10 py-4 border-b sticky top-0 left-0 right-0 z-50 backdrop-blur-sm dark:bg-neutral-800/20 dark:border-neutral-800 bg-white/75 border-gray-200 transition-colors duration-300"
@@ -42,7 +42,8 @@ export function TopBar() {
                 icon: <span className="material-symbols-outlined !text-base">light_mode</span>,
                 onClick: () => {
                   toggleTheme("light");
-                }
+                },
+                className: themeState === "light" ? "bg-gray-200 dark:bg-zinc-700" : "",
               },
               {
                 key: "2",
@@ -50,7 +51,8 @@ export function TopBar() {
                 icon: <span className="material-symbols-outlined !text-base">dark_mode</span>,
                 onClick: () => {
                   toggleTheme("dark");
-                }
+                },
+                className: themeState === "dark" ? "bg-gray-200 dark:bg-zinc-700" : "",
               },
               {
                 key: "3",
@@ -58,7 +60,8 @@ export function TopBar() {
                 icon: <span className="material-symbols-outlined !text-base">auto_mode</span>,
                 onClick: () => {
                   toggleTheme("system");
-                }
+                },
+                className: themeState === "system" ? "bg-gray-200 dark:bg-zinc-700" : "",
               },
             ]
           }}

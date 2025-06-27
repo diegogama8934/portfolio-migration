@@ -4,13 +4,13 @@ import { useContext } from "react";
 import { themeContext } from "./ThemeProvider";
 
 export function AntDesignProvider({ children }: { children: React.ReactNode }) {
-  const { theme:systemTheme } = useContext(themeContext);
+  const { effectiveTheme } = useContext(themeContext);
   
   return (
     <ConfigProvider
       theme={{
         token: { colorPrimary: "#000000" },
-        algorithm: systemTheme === "dark" ? antdTheme.darkAlgorithm : antdTheme.defaultAlgorithm,
+        algorithm: effectiveTheme === "dark" ? antdTheme.darkAlgorithm : antdTheme.defaultAlgorithm,
       }}
     >
       {children}

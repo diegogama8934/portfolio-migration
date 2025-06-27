@@ -10,17 +10,25 @@ export function setStoredTheme(theme: Theme): void {
   localStorage.setItem(THEME_KEY, theme);
 }
 
-export function getSystemTheme(): Theme {
+export function getSystemTheme(): 'light' | 'dark' {
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 export function getInitialTheme(): Theme {
-  return getStoredTheme() || getSystemTheme();
+  return getStoredTheme() || 'system';
+}
+
+export function getEffectiveTheme(theme: Theme): 'light' | 'dark' {
+  if (theme === 'system') {
+    return getSystemTheme();
+  }
+  return theme;
 }
 
 export function applyTheme(theme: Theme): void {
-  document.documentElement.style.backgroundColor = theme === 'dark' ? '#0a0a0a' : 'white';
-  document.documentElement.setAttribute('data-theme', theme);
-  if (theme == "dark") document.querySelector("html")?.classList.add("dark");
-  if (theme == "light") document.querySelector("html")?.classList.remove("dark");
+  const effectiveTheme = getEffectiveTheme(theme);
+  document.documentElement.style.backgroundColor = effectiveTheme === 'dark' ? '#0a0a0a' : 'white';
+  document.documentElement.setAttribute('data-theme', effectiveTheme);
+  if (effectiveTheme === "dark") document.querySelector("html")?.classList.add("dark");
+  if (effectiveTheme === "light") document.querySelector("html")?.classList.remove("dark");
 }
