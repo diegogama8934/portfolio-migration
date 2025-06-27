@@ -10,7 +10,9 @@ export function TopBar() {
   const { t, i18n } = useTranslation();
   const { toggleTheme } = useContext(themeContext);
   return (
-    <nav className="flex justify-between items-center px-10 py-4 border-b border-gray-200 dark:border-neutral-800 dark:bg-neutral-800/20 sticky top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/75">
+    <nav
+      className="flex justify-between items-center px-10 py-4 border-b sticky top-0 left-0 right-0 z-50 backdrop-blur-sm dark:bg-neutral-800/20 dark:border-neutral-800 bg-white/75 border-gray-200 transition-colors duration-300"
+    >
       <motion.img
         src="/icon.svg"
         alt="logo"
@@ -65,7 +67,7 @@ export function TopBar() {
           <Button
             className="flex items-center gap-2"
             type="text"
-            icon={<span className="material-symbols-outlined !text-base dark:!text-white ">contrast</span>}
+            icon={<span className="material-symbols-outlined transition-colors duration-300 !text-base dark:text-white">contrast</span>}
           >
             <span className="dark:text-white">{t("topBar.system")}</span>
           </Button>
@@ -99,18 +101,18 @@ export function TopBar() {
             type="text"
             icon={
               <span
-                className={`material-symbols-outlined !text-base ${i18n.language === "es" ? "dark:!text-white" : "dark:!text-black"}`}
+                className={`material-symbols-outlined transition-colors duration-300 !text-base dark:text-white`}
               >
                 language
               </span>
             }
           >
-            <span className="dark:text-white">{i18n.language === "es" ? t("topBar.spanish") : t("topBar.english")}</span>
+            <span className="dark:text-white transition-colors duration-300">{i18n.language === "es" ? t("topBar.spanish") : t("topBar.english")}</span>
           </Button>
         </Dropdown>
 
         <TopBarCta>
-          <a href="/CV_EN.pdf" className="dark:text-black text-white" download>{t("topBar.downloadCV")}</a>
+          <a href="/CV_EN.pdf" className="px-4 py-[10px] inline-block dark:text-black text-white" download>{t("topBar.downloadCV")}</a>
         </TopBarCta>
       </motion.div>
     </nav >

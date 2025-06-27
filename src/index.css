@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 .orbiter {
   position: absolute;
   animation: move-around-orbit 5s ease-in-out infinite;
