@@ -4,7 +4,7 @@ import { HeroBtn } from "../atoms/HeroBtn";
 import { useTranslation } from "react-i18next";
 
 export function SectionContact() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="relative z-10 flex flex-col items-center">
@@ -22,7 +22,7 @@ export function SectionContact() {
 
         <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full">
           <HeroBtn className="sm:flex-1">
-            <a href="/CV_EN.pdf" download className="text-gray-500 dark:text-zinc-300">{t("hero.cvAction")}</a>
+            <a href={`/CV_${i18n.language === "es" ? "ES" : "EN"}.pdf`} download className="text-gray-500 dark:text-zinc-300">{t("hero.cvAction")}</a>
           </HeroBtn>
           <HeroBtn className="sm:flex-1">
             <a target="_blank" href="https://www.linkedin.com/in/diego-martínez-garcía-3301902a8" className="text-gray-500 dark:text-zinc-300">LinkedIn</a>

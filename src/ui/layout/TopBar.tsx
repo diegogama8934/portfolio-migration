@@ -112,7 +112,7 @@ export function TopBar() {
         </Dropdown>
 
         <TopBarCta>
-          <a href="/CV_EN.pdf" className="px-4 py-[10px] inline-block dark:text-black text-white" download>{t("topBar.downloadCV")}</a>
+          <a href={`/CV_${i18n.language === "es" ? "ES" : "EN"}.pdf`} className="px-4 py-[10px] inline-block dark:text-black text-white" download>{t("topBar.downloadCV")}</a>
         </TopBarCta>
       </motion.div>
     </nav >
