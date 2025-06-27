@@ -5,7 +5,7 @@ import { Button, Dropdown } from "antd";
 import { useTranslation } from "react-i18next";
 
 export function TopBar() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <nav className="flex justify-between items-center px-10 py-4 border-b border-gray-200 sticky top-0 left-0 right-0 z-50 backdrop-blur-sm bg-white/75">
@@ -54,17 +54,27 @@ export function TopBar() {
           menu={{
             items: [
               {
-                key: "1", label: t("topBar.english"), icon: <span>🇺🇸</span>
+                key: "1",
+                label: t("topBar.english"),
+                icon: <span>🇺🇸</span>,
+                onClick: () => {
+                  i18n.changeLanguage("en");
+                }
               },
               {
-                key: "2", label: t("topBar.spanish"), icon: <span>🇲🇽</span>
+                key: "2",
+                label: t("topBar.spanish"),
+                icon: <span>🇲🇽</span>,
+                onClick: () => {
+                  i18n.changeLanguage("es");
+                }
               }
             ]
           }}
           trigger={["click"]}
         >
           <Button className="flex items-center gap-2" type="text" icon={<span className="material-symbols-outlined !text-base">language</span>}>
-            <span>{t("topBar.spanish")}</span>
+            <span>{i18n.language === "es" ? t("topBar.spanish") : t("topBar.english")}</span>
           </Button>
         </Dropdown>
 
