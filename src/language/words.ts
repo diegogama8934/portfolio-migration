@@ -106,7 +106,8 @@ export const languageConfig = {
       technologies: "Tecnologías",
       softSkills: "Habilidades blandas",
       contact: "Contacto",
-      downloadCV: "Descargar CV"
+      downloadCV: "Descargar CV",
+      navigation: "Navegación"
     }
   },
   en: {
@@ -126,9 +127,9 @@ export const languageConfig = {
       description: "A graduated software engineer.",
       p1: "I'm Diego Martínez García.",
       p2: "I started my career in interface design, focused on creating accessible and functional experiences. Over time, I wanted to bring my designs to life through code, and I found in React a key tool to do so. Today, I combine my UI design skills with front-end development, creating prototypes and taking them to production with attention to both aesthetics and clean code.",
-      p3: "Recently, I’ve worked with Microfrontend architectures using Single SPA, developing shared modules to enhance scalability and avoid redundancy. I'm currently preparing for the AWS Developer Associate certification, aiming to strengthen my cloud skills.",
+      p3: "Recently, I've worked with Microfrontend architectures using Single SPA, developing shared modules to enhance scalability and avoid redundancy. I'm currently preparing for the AWS Developer Associate certification, aiming to strengthen my cloud skills.",
       p4: "I have three years of experience, which began in a collaborative development center where I volunteered to learn and contribute. There, I developed both technical and soft skills: organization, communication, and teamwork.",
-      p5: "I consider myself adaptable and open to continuous learning. I enjoy working out, playing basketball and video games, and I stay up to date with courses in my field. My English level is B2, and I’m actively working to regain fluency and communicate confidently in international settings."
+      p5: "I consider myself adaptable and open to continuous learning. I enjoy working out, playing basketball and video games, and I stay up to date with courses in my field. My English level is B2, and I'm actively working to regain fluency and communicate confidently in international settings."
     },
     projects: {
       title1: "Work that",
@@ -176,7 +177,7 @@ export const languageConfig = {
     softSkills: {
       title1: "The way I ",
       title2: "work",
-      description: "Skills You Can’t Compile, but Matter",
+      description: "Skills You Can't Compile, but Matter",
       s1: "Communication",
       s1Description: "I communicate clearly, ask the right questions, and keep teams aligned. Always open to feedback and willing to learn.",
       s2: "Resilience",
@@ -216,7 +217,8 @@ export const languageConfig = {
       technologies: "Technologies",
       softSkills: "Soft skills",
       contact: "Contact",
-      downloadCV: "Download CV"
+      downloadCV: "Download CV",
+      navigation: "Navigation"
     }
   },
 };
