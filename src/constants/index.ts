@@ -23,13 +23,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "scale-90 bg-white p-2 rounded-full",
     background: "bg-blue-400",
     level: 90,
-    knowledge: [
-      "Componentes funcionales y de clase",
-      "Hooks personalizados y nativos",
-      "Context API y Redux",
-      "React Router y navegación",
-      "Optimización de rendimiento"
-    ]
+    description: "Front-end library for building user interfaces."
   },
   {
     name: "TypeScript",
@@ -37,13 +31,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "scale-90 bg-white p-2 rounded-full",
     background: "bg-blue-600",
     level: 85,
-    knowledge: [
-      "Tipado estático avanzado",
-      "Interfaces y tipos genéricos",
-      "Decoradores y metadata",
-      "Configuración de proyectos",
-      "Integración con frameworks"
-    ]
+    description: "JavaScript with types."
   },
   {
     name: "Next.js",
@@ -51,13 +39,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-gray-500",
     level: 80,
-    knowledge: [
-      "App Router y Pages Router",
-      "Server Components y Client Components",
-      "API Routes y middleware",
-      "Optimización de imágenes",
-      "Deployment y configuración"
-    ]
+    description: "React framework for building server-side rendered applications."
   },
   {
     name: "Node.js",
@@ -65,13 +47,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "scale-90 bg-white p-2 rounded-full",
     background: "bg-green-600",
     level: 75,
-    knowledge: [
-      "Express.js y frameworks",
-      "APIs RESTful y GraphQL",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs",
-      "Testing y debugging"
-    ]
+    description: "JavaScript runtime for building server-side applications."
   },
   {
     name: "Tailwind CSS",
@@ -79,13 +55,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "scale-90 bg-white p-2 rounded-full",
     background: "bg-cyan-500",
     level: 90,
-    knowledge: [
-      "Utility-first CSS",
-      "Componentes personalizados",
-      "Responsive design",
-      "Animaciones y transiciones",
-      "Configuración avanzada"
-    ]
+    description: "CSS framework for building responsive user interfaces."
   },
   {
     name: "Figma",
@@ -93,13 +63,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "Diseño de interfaces",
-      "Prototipado interactivo",
-      "Sistemas de diseño",
-      "Colaboración en equipo",
-      "Integración con desarrollo"
-    ]
+    description: "Design tool for creating user interfaces."
   },
   {
     name: "HTML",
@@ -107,11 +71,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Markup language for creating web pages."
   },
   {
     name: "CSS",
@@ -119,11 +79,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Style sheet language for creating web pages."
   },
   {
     name: "JavaScript",
@@ -131,11 +87,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Programming language for creating web pages."
   },
   {
     name: "Express.js",
@@ -143,11 +95,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Node.js framework for building server-side applications."
   },
   {
     name: "AWS",
@@ -155,11 +103,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Cloud platform for building scalable applications."
   },
   {
     name: "GIT",
@@ -167,11 +111,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Version control system for tracking changes in code."
   },
   {
     name: "Nest",
@@ -179,11 +119,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Node.js framework for building server-side applications."
   },
   {
     name: "Single SPA",
@@ -191,11 +127,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Microfrontend framework for building scalable applications."
   },
   {
     name: "Jira",
@@ -203,11 +135,7 @@ export const technologiesPool: TechnologyItem[] = [
     imgClassName: "",
     background: "bg-purple-600",
     level: 70,
-    knowledge: [
-      "API RESTful",
-      "Autenticación y autorización",
-      "Bases de datos y ORMs"
-    ]
+    description: "Project management tool for tracking changes in code."
   },
 ];
 

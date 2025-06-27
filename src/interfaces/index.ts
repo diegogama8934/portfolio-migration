@@ -31,7 +31,7 @@ export interface TechnologyItem {
   imgClassName: string
   background: string
   level: number
-  knowledge: string[]
+  description: string;
 }
 
 export interface ProjectLink {
