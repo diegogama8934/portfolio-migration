@@ -93,6 +93,20 @@ export const languageConfig = {
       rights: "Todos los derechos reservados.",
       madeBy: "Hecho por",
       socialMedia: "Redes sociales"
+    },
+    topBar: {
+      home: "Inicio",
+      light: "Claro",
+      dark: "Oscuro",
+      system: "Sistema",
+      english: "Inglés",
+      spanish: "Español",
+      aboutMe: "Sobre mí",
+      projects: "Proyectos",
+      technologies: "Tecnologías",
+      softSkills: "Habilidades blandas",
+      contact: "Contacto",
+      downloadCV: "Descargar CV"
     }
   },
   en: {
@@ -189,6 +203,20 @@ export const languageConfig = {
       rights: "All rights reserved.",
       madeBy: "Made by",
       socialMedia: "Social media"
+    },
+    topBar: {
+      home: "Home",
+      light: "Light",
+      dark: "Dark",
+      system: "System",
+      english: "English",
+      spanish: "Español",
+      aboutMe: "About me",
+      projects: "Projects",
+      technologies: "Technologies",
+      softSkills: "Soft skills",
+      contact: "Contact",
+      downloadCV: "Download CV"
     }
   },
 };
