@@ -81,3 +81,7 @@
 .gradient-text {
   @apply bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-600 bg-clip-text text-transparent dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-300;
 }
+
+.project-link {
+  @apply flex gap-2 items-center outline-1 outline-zinc-200 hover:outline-1 hover:outline-zinc-300 p-2 bg-zinc-100 rounded-md transition-all duration-300 hover:bg-zinc-200;
+}

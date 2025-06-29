@@ -8,7 +8,7 @@ export function ProjectDetails() {
   console.log(id);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mb-40">
       <div className="flex flex-col gap-4 w-full items-center justify-center">
         <h1 className="section-title">TEACH</h1>
         <p className="section-description">
@@ -102,15 +102,38 @@ export function ProjectDetails() {
 
 
             <h2 className="section-description !text-left !font-medium" id="links">Links and resources</h2>
-            <p className="section-paragraph !text-left">
-              Something
-            </p>
-            <p className="section-paragraph !text-left">
-              Something
-            </p>
-            <p className="section-paragraph !text-left">
-              Something
-            </p>
+            <a
+              href="https://www.figma.com/design/2kudpkoGf73ckYiZyxkCvC/TEACH?node-id=0-1&t=UPjhdnu53ZJ7qdjY-1"
+              target="_blank"
+              className="project-link group"
+            >
+              <span className="!text-zinc-400 material-symbols-outlined group-hover:!text-zinc-600 transition-all duration-300">design_services</span>
+              <span className="section-paragraph !text-left group-hover:!text-zinc-600 transition-all duration-300">
+                Watch Figma design file
+              </span>
+            </a>
+
+            <a
+              href="https://github.com/diegogama8934/teach"
+              target="_blank"
+              className="project-link group"
+            >
+              <span className="!text-zinc-400 material-symbols-outlined group-hover:!text-zinc-600 transition-all duration-300">code</span>
+              <span className="section-paragraph !text-left group-hover:!text-zinc-600 transition-all duration-300">
+                Watch code repository
+              </span>
+            </a>
+
+            <a
+              href="https://teach-opal.vercel.app/"
+              target="_blank"
+              className="project-link group"
+            >
+              <span className="!text-zinc-400 material-symbols-outlined group-hover:!text-zinc-600 transition-all duration-300">public</span>
+              <span className="section-paragraph !text-left group-hover:!text-zinc-600 transition-all duration-300">
+                Watch website
+              </span>
+            </a>
 
 
             <h2 className="section-description !text-left !font-medium" id="testimonials">Testimonials and comments</h2>
