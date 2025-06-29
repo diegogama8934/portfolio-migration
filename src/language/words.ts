@@ -89,6 +89,15 @@ export const languageConfig = {
       placePlaceholder: "Lugar / Empresa / Proyecto / etc.",
       message: "Mensaje",
       send: "Enviar",
+      image: "Imagen",
+      watchPreview: "Ver vista previa",
+      preview: "Vista previa",
+      previewDescription: "Puedes hacer click sobre la tarjeta para expandir el texto en su totalidad",
+      removeImage: "Remover imagen",
+      uploadInstructions: "Haz clic o arrastra un archivo a esta área para subirlo",
+      uploadDetails: "Los formatos permitidos son jpg, jpeg o png.",
+      close: "Cerrar",
+      emptyReferences: "Aún no hay referencias. ¡Sé el primero...! puedes dejar tu opinión sobre el portafolio :)"
     },
     footer: {
       rights: "Todos los derechos reservados.",
@@ -201,6 +210,15 @@ export const languageConfig = {
       placePlaceholder: "Place / Company / Project / etc.",
       message: "Message",
       send: "Send",
+      image: "Image",
+      watchPreview: "Watch preview",
+      preview: "Preview",
+      previewDescription: "You can click on the card to expand the text in its entirety",
+      removeImage: "Remove image",
+      uploadInstructions: "Click or drag file to this area to upload",
+      uploadDetails: "Allowed formats are jpg, jpeg and png",
+      close: "Close",
+      emptyReferences: "No references yet. Be the first...! you can let your opinion about the portfolio :)"
     },
     footer: {
       rights: "All rights reserved.",

@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
-import { Button, Input, Pagination } from "antd";
+import { Empty } from "antd";
 import { HeroBtn } from "../atoms/HeroBtn";
 import { useTranslation } from "react-i18next";
+import { FormCreateReference } from "../common/FormCreateReference";
 
 export function SectionContact() {
   const { t, i18n } = useTranslation();
@@ -40,82 +41,16 @@ export function SectionContact() {
           {t("contact.description")}
         </motion.p>
 
-        <form className="grid xl:grid-cols-3 grid-cols-1 gap-4 border border-gray-200 rounded-md w-full p-8 bg-white dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300">
-          <span className="text-gray-500 font-bold dark:text-zinc-300">{t("contact.references")}</span>
-          <p className="col-span-3 text-gray-500 text-sm dark:text-zinc-300">{t("contact.referencesDescription")}</p>
-          
-          <div className="flex flex-col gap-2 xl:col-span-1 col-span-3">
-            <label htmlFor="name" className="text-gray-500 text-sm dark:text-zinc-300">
-              <span className="text-red-500">* </span>
-              {t("contact.name")}
-            </label>
-            <Input id="name" placeholder={t("contact.name")} />
-          </div>
-          
-          <div className="flex flex-col gap-2 xl:col-span-1 col-span-3">
-            <label htmlFor="role" className="text-gray-500 text-sm dark:text-zinc-300">
-              <span className="text-red-500">* </span>
-              {t("contact.role")}
-            </label>
-            <Input id="role" placeholder={t("contact.role")} />
-          </div>
-
-          <div className="flex flex-col gap-2 xl:col-span-1 col-span-3">
-            <label htmlFor="place" className="text-gray-500 text-sm dark:text-zinc-300">
-              <span className="text-red-500">* </span>
-              {t("contact.place")}
-            </label>
-            <Input id="place" placeholder={t("contact.placePlaceholder")} />
-          </div>
-
-          <div className="flex flex-col gap-2 col-span-3">
-            <label htmlFor="message" className="text-gray-500 text-sm dark:text-zinc-300">
-              <span className="text-red-500">* </span>
-              {t("contact.message")}
-            </label>
-            <Input.TextArea id="message" placeholder={t("contact.message")} autoSize={{ minRows: 4, maxRows: 6 }} />
-          </div>
-          <div className="xl:col-span-3 col-span-1 flex justify-end">
-            <Button type="primary" htmlType="submit" className="w-fit">{t("contact.send")}</Button>
-          </div>
-        </form>
+        <FormCreateReference
+          target="myProfile"
+        />
 
         <div className="grid xl:grid-cols-2 grid-cols-1 gap-8 w-full">
-          <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-md dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300">
-            <div className="flex items-center gap-4">
-              <img
-                src="https://img.freepik.com/foto-gratis/cintura-arriba-retrato-hombre-guapo-afeitar-serio-mantiene-manos-juntas-vestido-camisa-azul-oscuro-ha-hablado-interlocutor-esta-parado-contra-pared-blanca-freelancer-hombre-seguro-si-mismo_273609-16320.jpg?semt=ais_items_boosted&w=740"
-                alt="profile"
-                className="w-14 h-14 object-cover rounded-full"
-              />
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">Juan Pablo Costas Rueda</h3>
-                <p className="text-sm text-gray-500">Software Engineer | <span>Kronox & Kairos</span></p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-500 dark:text-zinc-300">
-              I'm looking for a new challenge. I'm open to new opportunities.
-            </p>
+          <div className="col-span-2 w-full">
+            <Empty description={t("contact.emptyReferences")}/>
           </div>
 
-          <div className="flex flex-col gap-4 p-8 border border-gray-200 rounded-md dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300">
-            <div className="flex items-center gap-4">
-              <img
-                src="https://secrecyjewels.es/blog/wp-content/uploads/2022/10/esencia-de-una-persona.jpg"
-                alt="profile"
-                className="w-14 h-14 object-cover rounded-full"
-              />
-              <div className="flex flex-col gap-2">
-                <h3 className="text-lg font-semibold">Ana María Velázquez Figueroa</h3>
-                <p className="text-sm text-gray-500">Software Engineer | <span>Kronox & Kairos</span></p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-500 dark:text-zinc-300">
-              {t("contact.referencesDescription")}
-            </p>
-          </div>
-
-          <div className="xl:col-span-2 col-span-1 w-full flex justify-center">
+          {/*<div className="xl:col-span-2 col-span-1 w-full flex justify-center">
             <Pagination
               simple
               defaultCurrent={1}
@@ -123,7 +58,7 @@ export function SectionContact() {
               pageSize={6}
               disabled
             />
-          </div>
+          </div>*/}
         </div>
 
       </section>
