@@ -66,6 +66,10 @@
   @apply text-lg md:text-2xl text-center text-gray-500 leading-relaxed font-light max-w-2xl dark:text-zinc-300
 }
 
+.section-paragraph {
+  @apply text-sm md:text-base text-left text-gray-500 leading-relaxed font-light dark:text-zinc-300;
+}
+
 .section-btn-link {
   @apply relative inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-gradient-to-r from-white/80 to-white/60 hover:from-blue-50/90 hover:to-purple-50/90 border border-white/40 hover:border-blue-200/60 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 backdrop-blur-sm;
 }
@@ -76,4 +80,8 @@
 
 .gradient-text {
   @apply bg-gradient-to-r from-zinc-800 via-zinc-700 to-zinc-600 bg-clip-text text-transparent dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-300;
+}
+
+.project-link {
+  @apply flex gap-2 items-center outline-1 outline-zinc-200 hover:outline-1 hover:outline-zinc-300 p-2 bg-zinc-100 rounded-md transition-all duration-300 hover:bg-zinc-200;
 }

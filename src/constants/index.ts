@@ -1,5 +1,20 @@
 import type { ActiveLink, OpinionCardProps, Project, TechnologyItem } from "../interfaces";
 
+export const initialFormReference = {
+  name: "",
+  role: "",
+  place: "",
+  message: ""
+}
+
+export const initialFormReferenceErrors = {
+  name: "",
+  role: "",
+  place: "",
+  message: "",
+  image: ""
+}
+
 export const porfolioSections: ActiveLink[] = [
   {
     href: "/",
@@ -13,7 +28,6 @@ export const porfolioSections: ActiveLink[] = [
     href: "/projects",
     pageName: "Projects"
   }
-  //TODO: Add contact and testimonials
 ];
 
 export const technologiesPool: TechnologyItem[] = [
