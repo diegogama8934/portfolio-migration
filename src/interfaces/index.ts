@@ -1,3 +1,10 @@
+export interface ApiResponse<T> {
+  statusCode: number
+  message: string
+  data: T
+  success: boolean
+}
+
 export interface ActiveLink {
   href: string
   pageName: string
@@ -10,19 +17,6 @@ export interface ProjectResume {
   github?: string
   figma?: string
   page?: string
-}
-
-export interface Project {
-  id: string
-  name: string
-  topic: string
-  description: string
-  image: string
-  github?: string
-  page?: string
-  figma?: string
-  technologies: string[]
-  tags: string[]
 }
 
 export interface TechnologyItem {

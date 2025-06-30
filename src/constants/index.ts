@@ -1,4 +1,4 @@
-import type { ActiveLink, OpinionCardProps, Project, TechnologyItem } from "../interfaces";
+import type { ActiveLink, OpinionCardProps, TechnologyItem } from "../interfaces";
 
 export const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -182,18 +182,3 @@ export const opinions: OpinionCardProps[] = [
     place: "Tech Academy"
   }
 ];
-
-export const projects: Project[] = [
-  {
-    id: "project-1",
-    name: "Teach",
-    topic: "Educación en remoto",
-    image: "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
-    technologies: ["React", "Next", "Tailwind"],
-    tags: ["Web", "Mobile", "Desktop"],
-    description: "Educación en remoto",
-    github: "https://github.com/juan-pablo-garcia/teach-opal",
-    page: "https://teach-opal.vercel.app/home/subjects",
-    figma: "https://www.figma.com/design/1234567890/Teach-Opal?node-id=0-1"
-  },
-]
