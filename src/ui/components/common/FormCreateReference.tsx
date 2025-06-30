@@ -24,6 +24,8 @@ export function FormCreateReference({ target, projectId }: FormCreateReferencePr
   const [isPreviewModalOpen, setIsPreviewModalOpen] = useState(false);
   const { t } = useTranslation();
 
+  console.log(projectId);
+
   function isFormValid() {
     let isValid = true;
     const newErrors = { ...initialErrors };
