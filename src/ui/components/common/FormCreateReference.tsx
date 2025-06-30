@@ -1,12 +1,16 @@
-import { Button, Input, Upload, type GetProp, type UploadProps } from "antd";
+import { Alert, Button, Input, notification, Upload, type GetProp, type UploadProps } from "antd";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { remove_non_ascii } from "../../../utils/files";
+import { ModalPreview } from "./ModalPreview";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { createReferenceToProfile as createReferenceToProfileFn } from "../../../service/reference/createToProfile";
+import { createReferenceToProject as createReferenceToProjectFn } from "../../../service/reference/createToProject";
+import type { Reference } from "../../../interfaces/reference";
 import {
   initialFormReference as initialForm,
   initialFormReferenceErrors as initialErrors
 } from "../../../constants";
-import { ModalPreview } from "./ModalPreview";
 
 interface FormCreateReferenceProps {
   target: "project" | "myProfile";
@@ -22,7 +26,27 @@ export function FormCreateReference({ target, projectId }: FormCreateReferencePr
   const [image, setImage] = useState<File | undefined>(undefined);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const [isPreviewModalOpen, setIsPreviewModalOpen] = useState(false);
+  const [api, contextHolder] = notification.useNotification();
+  const queryClient = useQueryClient();
   const { t } = useTranslation();
+
+  const {
+    mutate: createReferenceToProfile,
+    isPending: createReferenceToProfileLoading,
+    error: createReferenceToProfileError
+  } = useMutation({
+    mutationFn: createReferenceToProfileFn,
+    onSuccess: createReferenceToProfileSuccess
+  });
+
+  const {
+    mutate: createReferenceToProject,
+    isPending: createReferenceToProjectLoading,
+    error: createReferenceToProjectError
+  } = useMutation({
+    mutationFn: createReferenceToProjectFn,
+    onSuccess: createReferenceToProjectSuccess
+  });
 
   function isFormValid() {
     let isValid = true;
@@ -55,16 +79,42 @@ export function FormCreateReference({ target, projectId }: FormCreateReferencePr
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!isFormValid()) return;
-    
+
     const formData: FormData = new FormData();
     formData.append("name", form.name);
     formData.append("role", form.role);
     formData.append("place", form.place);
     formData.append("description", form.message);
     formData.append("image", image as FileType, remove_non_ascii("file.name"));
-    
-    if (target == "myProfile") console.log("Fetch form data to POST to /testimonials");
-    if (target == "project") console.log("Fetch form data to PATCH to /projects/:id");
+
+    if (target == "myProfile") createReferenceToProfile(formData);
+    if (target == "project") createReferenceToProject({ payload: formData, projectId: projectId! });
+  }
+
+  function createReferenceToProfileSuccess(createdReference: Reference) {
+    api.success({ message: "Referencia creada satisfactoriamente" });
+    queryClient.setQueryData<Reference[]>(
+      ["references", "profile"],
+      (oldData) => (
+        oldData
+          ? [...oldData, createdReference]
+          : [createdReference]
+      )
+    );
+    clearForm();
+  }
+
+  function createReferenceToProjectSuccess(createdReference: Reference) {
+    api.success({ message: "Referencia creada satisfactoriamente" });
+    queryClient.setQueryData<Reference[]>(
+      ["projectReferences", projectId],
+      (oldData) => (
+        oldData
+          ? [...oldData, createdReference]
+          : [createdReference]
+      )
+    );
+    clearForm();
   }
 
   function onInputChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -81,11 +131,17 @@ export function FormCreateReference({ target, projectId }: FormCreateReferencePr
     return false;
   }
 
+  function clearForm() {
+    setForm(() => initialForm);
+    setErrors(() => initialErrors);
+    clearImage();
+  }
+
   function clearImage() {
-    if (imagePreview) URL.revokeObjectURL(imagePreview)
     setImage(undefined);
     setImagePreview(null);
-    setErrors({ ...errors, image: "" });
+    if (imagePreview) URL.revokeObjectURL(imagePreview)
+    if (errors.image) setErrors({ ...errors, image: "" });
   }
 
   return (
@@ -93,6 +149,7 @@ export function FormCreateReference({ target, projectId }: FormCreateReferencePr
       onSubmit={onSubmit}
       className="grid xl:grid-cols-3 grid-cols-1 gap-4 border border-gray-200 rounded-md w-full p-8 bg-white dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-300"
     >
+      {contextHolder}
       <span className="text-gray-500 font-bold dark:text-zinc-300">{t("contact.references")}</span>
       <p className="col-span-3 text-gray-500 text-sm dark:text-zinc-300">{t("contact.referencesDescription")}</p>
 
@@ -205,16 +262,39 @@ export function FormCreateReference({ target, projectId }: FormCreateReferencePr
         {errors.image && <span className="text-red-500 text-sm">{errors.image}</span>}
       </div>
 
+      {(createReferenceToProfileError || createReferenceToProjectError) && (
+        <Alert
+          type="error"
+          message="Algo salió mal :("
+          description={createReferenceToProfileError?.message || createReferenceToProjectError?.message}
+          className="xl:col-span-3 col-span-1"
+          rootClassName="w-full"
+        />
+      )}
+
       <div className="xl:col-span-3 col-span-1 flex xl:flex-row flex-col xl:justify-between xl:gap-0 gap-4">
         <Button
-          disabled={!imagePreview}
+          disabled={!imagePreview || createReferenceToProfileLoading || createReferenceToProjectLoading}
           onClick={clearImage}
         >
           {t("contact.removeImage")}
         </Button>
         <div className="flex gap-4 xl:flex-row flex-col">
-          <Button onClick={() => setIsPreviewModalOpen(true)} className="w-fit">{t("contact.preview")}</Button>
-          <Button type="primary" htmlType="submit" className="w-fit">{t("contact.send")}</Button>
+          <Button
+            onClick={() => setIsPreviewModalOpen(true)}
+            className="w-fit"
+            disabled={createReferenceToProfileLoading || createReferenceToProjectLoading}
+          >
+            {t("contact.preview")}
+          </Button>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="w-fit"
+            loading={createReferenceToProfileLoading || createReferenceToProjectLoading}
+          >
+            {t("contact.send")}
+          </Button>
         </div>
       </div>
 

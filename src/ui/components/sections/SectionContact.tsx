@@ -1,11 +1,23 @@
 import { motion } from "motion/react";
-import { Empty } from "antd";
+import { Alert, Empty } from "antd";
 import { HeroBtn } from "../atoms/HeroBtn";
 import { useTranslation } from "react-i18next";
 import { FormCreateReference } from "../common/FormCreateReference";
+import { useQuery } from "@tanstack/react-query";
+import { getMultipleReferences } from "../../../service/reference/getMultiple";
+import { ReferenceCard } from "../common/ReferenceCard";
 
 export function SectionContact() {
   const { t, i18n } = useTranslation();
+
+  const {
+    data: references,
+    isLoading: referencesLoading,
+    error: referencesError
+  } = useQuery({
+    queryKey: ["references", "profile"],
+    queryFn: () => getMultipleReferences({ queryParams: {} })
+  });
 
   return (
     <div className="relative z-10 flex flex-col items-center">
@@ -46,8 +58,25 @@ export function SectionContact() {
         />
 
         <div className="grid xl:grid-cols-2 grid-cols-1 gap-8 w-full">
+          {references?.map(ref => (
+            <ReferenceCard
+              key={ref.id}
+              {...ref}
+            />
+          ))}
           <div className="col-span-2 w-full">
-            <Empty description={t("contact.emptyReferences")}/>
+            {(referencesLoading || references?.length == 0) && (
+              <Empty
+                description={t("contact.emptyReferences")}
+              />
+            )}
+            {referencesError && (
+              <Alert
+                type="error"
+                message="Algo salió mal :("
+                description={referencesError.message}
+              />
+            )}
           </div>
 
           {/*<div className="xl:col-span-2 col-span-1 w-full flex justify-center">

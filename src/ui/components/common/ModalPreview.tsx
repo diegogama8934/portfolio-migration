@@ -1,15 +1,11 @@
 import { Button, Modal } from "antd";
 import { useTranslation } from "react-i18next";
 import { ReferenceCard } from "./ReferenceCard";
+import type { Reference } from "../../../interfaces/reference";
 
-interface ModalPreviewProps {
+interface ModalPreviewProps extends Reference {
   open: boolean;
   onClose: VoidFunction;
-  img: string | null;
-  name: string;
-  role: string;
-  place: string;
-  description: string;
 }
 
 export function ModalPreview({ onClose, open, description, name, place, role, img }: ModalPreviewProps) {

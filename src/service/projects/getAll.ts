@@ -4,7 +4,12 @@ import { apiUrl } from "../../constants";
 
 export async function getAllProjects() {
 
-  const response: ApiResponse<Project[]> = await fetch(`${apiUrl}/projects`)
+  const response: ApiResponse<Project[]> = await fetch(`${apiUrl}/projects`, {
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+  })
     .then(res => res.json())
     .catch(err => new Error(err))
 

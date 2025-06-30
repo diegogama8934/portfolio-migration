@@ -18,9 +18,6 @@ export function SectionProjects() {
     queryFn: getAllProjects
   });
 
-  console.log(projectsLoading);
-  console.log(projectsError);
-
   return (
     <div
       id="projects"

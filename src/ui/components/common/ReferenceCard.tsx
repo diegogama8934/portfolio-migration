@@ -1,15 +1,7 @@
 import { useState } from "react";
+import type { Reference } from "../../../interfaces/reference";
 
-interface ReferenceCardProps {
-  img: string | null;
-  name: string;
-  role: string;
-  place: string;
-  description: string;
-}
-
-
-export function ReferenceCard({ description, img, name, place, role }: ReferenceCardProps) {
+export function ReferenceCard({ description, image, name, place, role }: Reference) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   function toggleExpanded() {
@@ -22,9 +14,9 @@ export function ReferenceCard({ description, img, name, place, role }: Reference
       onClick={toggleExpanded}
     >
       <div className="flex items-center gap-4">
-        {img ? (
+        {image ? (
           <img
-            src={img}
+            src={image}
             alt="profile"
             className="w-14 h-14 object-cover rounded-full"
           />
